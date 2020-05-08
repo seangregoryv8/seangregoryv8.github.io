@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Contact_Me.css">
+    <title>Contact</title>
+</head>
+
+<body>
+    <nav>
+        <p>
+            Sean Gregory
+        </p>
+        <ul>
+            <li>
+                <a href=index.html>
+                    Home
+                </a>
+            </li>
+            <li>
+                <a class="Current" href="#">
+                    Contact
+                </a>
+            </li>
+            <li>
+                <a href="inspirations.html">
+                    My Inspirations
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/LightExcalibur">
+                    GitHub
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <div class="bg">
+
+            <form action="/action_page.php">
+                <h2>
+                    Want to Contact Me?
+                </h2>
+                <div>
+                    <label for="fnameFirst">
+                        Name:
+                    </label>
+                </div>
+                <div>
+                    <input type="text" name="name" required>
+                </div>
+                <div>
+                    <label for="email">
+                        Email:
+                    </label>
+                </div>
+                <div>
+                    <input type="text" name="email" required>
+                </div>
+                <div>
+                    <label for="Phone" >
+                        Phone Number:
+                    </label>
+                </div>
+                <div>
+                    <input type="text" name="Phone" required>
+                </div>
+                <h2>
+                    Which method should I contact you first:
+                </h2>
+                <div>
+                    <input type="radio" name="age">
+                    <label for="method1">
+                        Email
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" name="age">
+                    <label for="method2">
+                        Phone
+                    </label>
+                </div>
+                <div>
+                    <label for="Province">Which Province do you live in:</label>
+                </div>
+                <div>
+                    <select id="Province" name="Province">
+                        <option value="Alberta">Alberta</option>
+                        <option value="British Columbia">British Columbia</option>
+                        <option value="Manitoba">Manitoba</option>
+                        <option value="New Brunswick">New Brunswick</option>
+                        <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                        <option value="Nova Scotia">Nova Scotia</option>
+                        <option value="Ontario">Ontario</option>
+                        <option value="Prince Edward Island">Prince Edward Island</option>
+                        <option value="Quebec">Quebec</option>
+                        <option value="Saskatchewan">Saskatchewan</option>
+                      </select>
+                </div>
+                <div>
+                    <h2>What would you like to talk about?</h2>
+
+                    <label for="msg1">Discussion:</label><br>
+                    <textarea name="msg1"></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Submit!">
+                </div>
+            </form>
+        </div>
+        
+    </section>
+</body>
+</html>
