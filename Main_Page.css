@@ -5,15 +5,9 @@
     box-sizing: border-box;
 }
 
-html, body 
-{
-    height: 100%; /* necessary */
-}
+html, body { height: 100%; /* necessary */ }
 /* Nav */
-body
-{
-    background-color: black;
-}
+body { background-color: black; }
 nav
 {
     display: flex;
@@ -58,23 +52,14 @@ nav ul a
     background-size: cover;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-section
-{
-    color: #ffffff;
-}
+section { color: #ffffff; }
 .Hero h1, .Title h2
 {
     text-align: center;
     font-size: 4rem;
 }
-.Title h2
-{
-    margin-bottom: 50px;
-}
-.Hero h2
-{
-    text-align: center;
-}
+.Title h2 { margin-bottom: 50px; }
+.Hero h2 { text-align: center; }
 .Who
 {
     margin-top: 60px;
@@ -84,10 +69,7 @@ section
     border: 3px solid #9c8647b4;
     border-radius: 20px;
 }
-.Who h2
-{
-    padding-bottom: 30px;
-}
+.Who h2 { padding-bottom: 30px; }
 .Who p
 {
     padding: 0 20px 20px 20px;
@@ -114,14 +96,8 @@ section
     text-align: center;
     border-radius: 20px;
 }
-.Animation h2, .Filmmaking h2, .Programming h2, .Literature h2
-{
-    font-size: 24px;
-}
-.AnimationVideo, .FilmmakingVideo, .ProgrammingImage
-{
-    grid-column: 2;
-}
+.Animation h2, .Filmmaking h2, .Programming h2, .Literature h2 { font-size: 24px; }
+.AnimationVideo, .FilmmakingVideo, .ProgrammingImage { grid-column: 2; }
 .AnimationText, .FilmmakingText, .ProgrammingText, .LiteratureText
 {
     text-align: center;
@@ -134,18 +110,9 @@ section
     border: 3px solid rgba(156, 134, 71, 0.706);
     border-radius: 20px;
 }
-.Animation, .AnimationVideo
-{
-    grid-row: 1;
-}
-.Filmmaking, .FilmmakingVideo
-{
-    grid-row: 2;
-}
-.Programming, .ProgrammingImage
-{
-    grid-row: 3;
-}
+.Animation, .AnimationVideo { grid-row: 1; }
+.Filmmaking, .FilmmakingVideo { grid-row: 2; }
+.Programming, .ProgrammingImage { grid-row: 3; }
 .Literature
 {
     grid-row: 4;
