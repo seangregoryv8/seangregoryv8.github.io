@@ -6,11 +6,7 @@
 }
 body
 {
-    display: grid;
-    grid-template-rows: 88px 18rem;
     background-color: black;
-    height: 100%;
-    font-family: 'Times New Roman', Times, serif;
 }
 /* Nav */
 body { background-color: black; }
