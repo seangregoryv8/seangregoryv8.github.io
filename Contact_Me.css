@@ -12,11 +12,12 @@ body
     height: 100%;
     font-family: 'Times New Roman', Times, serif;
 }
+/* Nav */
+body { background-color: black; }
 nav
 {
-    display: flex;
+    display: grid;
     align-items: center;
-    grid-template-columns: 300px, 150px, 150px, 150px;
     position: sticky;
     top: 0;
     left: 0;
@@ -27,23 +28,25 @@ nav
 }
 nav p
 {
-    margin-right: 15rem;
+    font-weight: 700;
+    margin-bottom: 10px;
     font-size: xx-large;
 }
 nav ul
 {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     list-style: none;
 }
 nav ul a
 {
+    margin-right: 20px;
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: x-large;
-    margin-right: 5rem;
     padding: 0 0 0 1.15rem;
 }
+/* End of Nav */
 section
 {
     display: flex;
