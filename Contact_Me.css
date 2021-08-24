@@ -92,13 +92,6 @@ section h2
 }
 @media only screen and (max-width: 550px)
 {
-    nav ul a
-    {
-        margin-right: 0;
-    }
-}
-@media only screen and (max-width: 550px)
-{
     nav ul
     {
         display: block;
@@ -106,6 +99,5 @@ section h2
     nav ul a
     {
         margin-right: 0;
-        padding: 0 0 0 10rem;
     }
 }
