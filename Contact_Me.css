@@ -24,6 +24,7 @@ nav
 }
 nav p
 {
+    text-align: center;
     font-weight: 700;
     margin-bottom: 10px;
     font-size: xx-large;
