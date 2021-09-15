@@ -78,7 +78,7 @@ section { color: #ffffff; }
     background-position: right;
     background-repeat: no-repeat;
 }
-.Animation, .Filmmaking, .Programming, .Literature
+.Animation, .Filmmaking, .Programming, .Literature, .WebProgramming
 {
     display: flex;
     flex-direction: column;
@@ -88,10 +88,25 @@ section { color: #ffffff; }
     text-align: center;
     border-radius: 20px;
 }
-.Animation h2, .Filmmaking h2, .Programming h2, .Literature h2 { font-size: 24px; }
-.AnimationVideo, .FilmmakingVideo, .ProgrammingImage { grid-column: 2; }
+.Work h2 { font-size: 24px; }
+.AnimationVideo, .FilmmakingVideo, .ProgrammingImage, .WebProgrammingImage { grid-column: 2; }
+.WebProgrammingShell
+{
+    text-align: center;
+    background-color: darkblue;
+    margin-bottom: 20px;
+}
+.WebProgrammingImage
+{
+    position: relative;
+    top: 4rem;
+    text-decoration: none;
+    color: white;
+    font-size: 36px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .ProgrammingImage { width: 500;}
-.AnimationText, .FilmmakingText, .ProgrammingText, .LiteratureText
+.ProjectText
 {
     text-align: center;
     margin-top: 3rem;
@@ -103,9 +118,10 @@ section { color: #ffffff; }
     border: 3px solid rgba(156, 134, 71, 0.706);
     border-radius: 20px;
 }
-.Animation, .AnimationVideo { grid-row: 1; }
-.Filmmaking, .FilmmakingVideo { grid-row: 2; }
-.Programming, .ProgrammingImage { grid-row: 3; }
+.WebProgramming, .WebProgrammingImage { grid-row: 1; }
+.Animation, .AnimationVideo { grid-row: 2; }
+.Filmmaking, .FilmmakingVideo { grid-row: 3; }
+.Programming, .ProgrammingImage { grid-row: 4; }
 .Literature
 {
     grid-row: 4;
@@ -116,18 +132,23 @@ section { color: #ffffff; }
 {
     .ShadowImage
     {
-        grid-template-rows: repeat(7, 300px); /* Increase for more spaces to add more examples */
+        grid-template-rows: repeat(9, 300px); /* Increase for more spaces to add more examples */
         grid-template-columns: 100%;
     }
-    .Animation, .AnimationVideo, .Filmmaking, .FilmmakingVideo, .Programming, .ProgrammingImage, .Literature
-    { grid-column: 1; }
-    .Animation { grid-row: 1; }
-    .AnimationVideo { grid-row: 2; }
-    .Filmmaking { grid-row: 3; }
-    .FilmmakingVideo { grid-row: 4; }
-    .Programming { grid-row: 5; }
-    .ProgrammingImage { grid-row: 6; }
-    .Literature { grid-row: 7; }
+    .WebProgramming, .WebProgrammingImage, .Animation, .AnimationVideo, .Filmmaking, .FilmmakingVideo, .Programming, .ProgrammingImage, .Literature
+    {
+        grid-column: 1;
+        line-height: 5rem;
+    }
+    .WebProgramming { grid-row: 1; }
+    .WebProgrammingImage { grid-row: 2; }
+    .Animation { grid-row: 3; }
+    .AnimationVideo { grid-row: 4; }
+    .Filmmaking { grid-row: 5; }
+    .FilmmakingVideo { grid-row: 6; }
+    .Programming { grid-row: 7; }
+    .ProgrammingImage { grid-row: 8; }
+    .Literature { grid-row: 9; }
     .Title h2 { margin-bottom: 0; }
 }
 @media only screen and (max-width: 550px)
