@@ -150,9 +150,12 @@ section { color: #ffffff; }
     .ProgrammingImage { grid-row: 8; }
     .Literature { grid-row: 9; }
     .Title h2 { margin-bottom: 0; }
+    .ProjectText { visibility: hidden; }
 }
 @media only screen and (max-width: 550px)
 {
     nav ul { display: block; }
-    nav ul a { margin-right: 0; padding: 0 0 0 10rem; }
+    nav ul a { margin-right: 0; padding: 0 0 0 0; }
+    .ProjectText { visibility: hidden; }
+    .Work { height: 10px; }
 }
