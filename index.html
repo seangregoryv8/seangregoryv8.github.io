@@ -3,33 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Main_Page.css">
-    <title>MainPage</title>
+    <link rel="stylesheet" href="nav.css">
+    <title>SeanGregory</title>
+    <style>
+        section
+        {
+            color: #ffffff;
+            background-image: url("./assets/ShadowImage.jpg");
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        section h1
+        {
+            text-align: center;
+            font-size: 4rem;
+        }
+        section h2
+        {
+            text-align: center;
+        }
+        div
+        {
+            text-align: center;
+            margin-top: 60px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgba(92, 68, 68, 0.719);
+            border: 3px solid #9c8647b4;
+            border-radius: 20px;
+        }
+        
+        div h2 { padding-bottom: 30px; }
+
+        div p
+        {
+            padding: 0 20px 20px 20px;
+            font-size: 16px;
+        }
+
+        /* Phone Viewing */
+        @media only screen and (max-width: 600px)
+        {
+            section h1
+            {
+                padding-top: 3rem;
+                font-size: 35px;
+            }
+            section h2
+            {
+                font-size: 20px;
+            }
+            div p
+            {
+                padding-bottom: 10rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <nav>
-        <p>Sean Gregory</p>
-        <p><a href="mailto:seangregoryv8@gmail.com" class="contactboxlink">E-mail: seangregoryv8@gmail.com</a></p>
+        <p id="name">Sean Gregory</p>
+        <p id="email"><a href="mailto:seangregoryv8@gmail.com" class="contactboxlink">E-mail: seangregoryv8@gmail.com</a></p>
         <ul>
             <li><a class="Current" href="#">Home</a></li>
-            <li><a href="inspirations.html">My Inspirations</a></li>
+            <li><a href="NewInspirations.html">My Inspirations</a></li>
+            <li><a href="works.html">My Portfolio</a></li>
             <li><a href="https://github.com/seangregoryv8">GitHub</a></li>
         </ul>
     </nav>
-    <section class="Hero">
+    <section>
         <h1>Sean Gregory</h1>
-        <h2 class="Story">Storyteller of many art forms</h2>
-        <div class="Who">
+        <h2>Storyteller of many art forms</h2>
+        <div>
             <h2>Who Am I?</h2>
             <p>
-                My name is Sean Gregory. I'm a student at John
-                Abbott College, studying in Computer Science.
-                While my possible career may lie in computers, that
-                is far from all in terms of what I do: Animation,
-                Music, Video Editing, Filmmaking, Storytelling,
-                I seek to use my extensive skills in the arts in
-                what I do in order to show people who I truly am.
+                I'm an art-oriented John Abbott College computer science student
+                with a keen eye for storytelling and finite attention to detail.
+                I always make sure everything I put out is my best work, and
+                never hesitate to sink hundreds of hours into a project to achieve
+                such. I seek to use my combination of art and computer skills
+                in whatever I do, in the hopes of fabricating something
+                truly amazing and bigger than myself that I could be proud
+                of for the rest of my life.
             </p>
             <p>
                 Born and raised in Montreal Quebec in a quiet town,
@@ -40,7 +99,7 @@
                 drink coffee), a park, or just in front of my computer,
                 trying to take all the insane ideas from my head and
                 find some use for them.
-            </p>
+            </p>    
             <p>
                 I have always focused a lot on finite detail, and hope to
                 use my combined set of artistic and computer skills to
@@ -48,57 +107,9 @@
             </p>
         </div>
     </section>
-    <section class="Title">
-        <h2 style="margin-bottom: 5rem;">My Works</h2>
-        <div class="ShadowImage">
-            <div class="Work">
-                <h2>Programming: Cube</h2>
-                <p class="ProjectText">
-                    In Web Programming 1, I was given the atsk of making a game in Javascript canvas,
-                    and produced a title that I would call my greatest programming achievement yet.
-                </p>
-            </div>
-            <p class="WebProgrammingShell"><a class="WebProgrammingImage" href="Project/3W5_Gregory_S/index.html">Play it here!</a></p>
-            <div class="Work">
-                <h2>Animation: Climate's Graveyard</h2>
-                <p class="ProjectText">
-                    This was my final project for my college Animation class, and
-                    the start of something amazing for me, as it is my proudest
-                    piece of work to date.
-                </p>
-            </div>
-            <iframe class="AnimationVideo" src="https://www.youtube.com/embed/TddHRwtS9-0" width="100%" height="80%"></iframe>
-            <div class="Work">
-                <h2>Filmmaking: Detracted Minds</h2>
-                <p class="ProjectText">
-                    Similar to Animation, I had done 2 semesters of Filmmaking, and this 
-                    was my final assignment for Filmmaking 2. With the help of Lucciano Vezina,
-                    along with many others, we were able to get together an 8-minute-long short movie
-                    that, while it may have its flaws, is still an amazing piece of work for my first
-                    attempt at a short movie.
-                </p>
-            </div>
-            <iframe class="FilmmakingVideo" src="https://www.youtube.com/embed/D-LhSjYk6OQ" width="100%" height="80%"></iframe>
-            <div class="Work">
-                <h2>Programming: Let's Box</h2>
-                <p class="ProjectText">
-                    When I entered into the computer science program, I was asked to make a game for my programming class.
-                    Here is a screenshot of what the game looks like in its 'Very Alpha' state. It was great to make and
-                    is the most advanced project I have worked on in the Computer Science Program. You can download and
-                    play the game by simply clicking on the image.
-                </p>
-            </div>
-            <p class="ProgrammingImage"><a href="assets/Game-apalooza Final Copy.exe" download><img src="assets/LB-2.png" height="70%" width="100%"></a></p>
-            <div class="Work"><h2>Literature: Phantoms In Need</h2>
-                <p class="ProjectText">
-                    One of the earliest 'big projects' I have ever done was a massive novella back when I was in grade 11,
-                    for a giant school project, that I called 'Phantoms In Need: Apostle of the Dead'. While it doesn't
-                    look the best, and may be the weakest of the bunch, literature is what I have spent a long time working
-                    on and improving. Just that we all have to start somewhere, and here was my somewhere to start.
-                </p>
-            </div>
-            </p>
-        </div>
-    </section>
+    <footer id="foot">
+        <p>Author: Sean Gregory</p>
+        <p id="email"><a href="mailto:seangregoryv8@gmail.com" class="contactboxlink">E-mail: seangregoryv8@gmail.com</a></p>
+    </footer>
 </body>
 </html>

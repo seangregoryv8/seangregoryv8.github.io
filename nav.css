@@ -1,0 +1,116 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body { position: relative; }
+
+nav
+{
+    display: grid;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(144, 238, 144, 0.5);
+    padding: 2rem 1.15rem 2rem 1.15rem;
+    z-index: 1;
+}
+nav #name
+{
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+nav #email
+{
+    font-size: xx-large;
+    padding-bottom: 10px;
+}
+nav #email a
+{
+    color: black;
+    text-decoration: none;
+}
+nav ul
+{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+nav ul li { text-align: center; }
+nav p { text-align: center;}
+nav ul a
+{
+    margin-right: 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    padding: 0 0 0 1.15rem;
+}
+
+.Current
+{
+    color: blue;
+    font-weight: 900;
+}
+
+footer
+{
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+footer p
+{
+    color: white;
+    font-size: 20px;
+}
+footer #email a
+{
+    color: white;
+    text-decoration: none;
+}
+
+/* Phone Viewing */
+@media only screen and (max-width: 600px)
+{
+    nav { position: inherit;}
+    nav #name
+    {
+        font-weight: 500;
+        margin-bottom: 10px;
+        font-size: 35px;
+    }
+    nav #email
+    {
+        font-size: x-large;
+        padding-bottom: 10px;
+    }
+    nav #email a
+    {
+        color: black;
+        text-decoration: none;
+    }
+    nav ul
+    {
+        display: block;
+        justify-content: center;
+        list-style: none;
+        padding-top: 20px;
+    }
+    nav ul li
+    {
+        padding: 3px 0;
+    }
+    nav p { text-align: center;}
+    nav ul a
+    {
+        text-align: center;
+        margin-right: 20px;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: x-large;
+        padding: 0 0 0 1.15rem;
+    }
+}

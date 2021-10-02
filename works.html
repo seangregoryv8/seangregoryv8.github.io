@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
+    <title>SeanGregory - Works</title>
+    <style>
+        section { color:#ffffff; }
+        section #MyWorks
+        {
+            padding-top: 2rem;
+            padding-bottom: 5rem;
+            font-size: 4rem;
+            text-align: center;
+            background-color: black;
+        }
+        #ShadowImage
+        {
+            display: grid;
+            grid-template-rows: repeat(4, 300px); /* Increase for more spaces to add more examples */
+            grid-template-columns: 60% 40%;
+            background-image: url("./assets/HeroImage.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode: color;
+        }
+
+        .Work
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-column: 1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        .Work h2 { font-size: 30px; }
+
+        .Work p
+        {
+            text-align: center;
+            margin-top: 3rem;
+            margin-left: 20px;
+            margin-right: 20px;
+            font-size: 18px;
+            line-height: 1.5rem;
+            background-color: rgba(92, 68, 68, 0.719);
+            border: 3px solid rgba(156, 134, 71, 0.706);
+            border-radius: 20px;
+        }
+        #WebImage
+        {
+            text-align: center;
+            background-color: darkblue;
+            margin-bottom: 20px;
+        }
+        #WebImage a
+        {
+            position: relative;
+            top: 4rem;
+            text-decoration: none;
+            color: white;
+            font-size: 36px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        #Web, #WebImage             { grid-row: 1; }
+        #Animation, #AnimationVideo { grid-row: 2; }
+        #Film, #FilmVideo           { grid-row: 3; }
+        #Prog, #ProgImage           { grid-row: 4; }
+
+        #WebImage, #AnimationVideo, #FilmVideo, #ProgImage
+        {
+            display: flex;
+            justify-content: center;
+            grid-column: 2;
+            width: 90%;
+            height: 70%;
+        }
+        
+        /* Phone Viewing */
+        @media only screen and (max-width: 600px)
+        {
+            section h2
+            {
+                font-size: 36px;
+            }
+
+            #ShadowImage
+            {
+                grid-template-rows: repeat(8, auto);
+                grid-template-columns: 100%;
+                background-image: none;
+                background-color: black;
+            }
+            /*.Work { flex-direction: unset; } */
+            .Work p
+            {
+                visibility: hidden;
+                color: transparent;
+                margin-left: 0;
+                margin-right: 0;
+                font-size: 0;
+                background-color: transparent;
+                border: none;
+            }
+
+            #WebImage
+            {
+                padding: 20px 0;
+            }
+            #WebImage a
+            {
+                top: 0;
+                font-size: 24px;
+            }
+            
+            #WebImage, #AnimationVideo, #FilmVideo, #ProgImage
+            {
+                margin: 0 auto;
+                grid-column: 1;
+                width: 50%;
+                height: auto;
+                margin-bottom: 5rem;
+            }
+            
+            #Web            { grid-row: 1; }
+            #WebImage       { grid-row: 2; }
+            #Animation      { grid-row: 3; }
+            #AnimationVideo { grid-row: 4; }
+            #Film           { grid-row: 5; }
+            #FilmVideo      { grid-row: 6; }
+            #Prog           { grid-row: 7; }
+            #ProgImage      { grid-row: 8; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <p id="name">Sean Gregory</p>
+        <p><a href="mailto:seangregoryv8@gmail.com" class="contactboxlink">E-mail: seangregoryv8@gmail.com</a></p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="NewInspirations.html">My Inspirations</a></li>
+            <li><a class="Current" href="#">My Portfolio</a></li>
+            <li><a href="https://github.com/seangregoryv8">GitHub</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2 id="MyWorks">My Portfolio</h2>
+        <div id="ShadowImage">
+            <div class="Work" id="Web">
+                <h2>Programming: Cube</h2>
+                <p>
+                    In Web Programming 1, I was given the task of making a game in Javascript canvas,
+                    and produced a title that I would call my greatest programming achievement yet.
+                </p>
+            </div>
+            <p id="WebImage">
+                <a href="Project/3W5_Gregory_S/index.html">
+                    Play it here!
+                </a>
+            </p>
+
+            <div class="Work" id="Animation">
+                <h2>Animation: Climate's Graveyard</h2>
+                <p>
+                    This was my final project for my college Animation class, and
+                    the start of something amazing for me, as it is my proudest
+                    piece of work to date.
+                </p>
+            </div>
+            <iframe id="AnimationVideo" src="https://www.youtube.com/embed/TddHRwtS9-0"></iframe>
+
+            <div class="Work" id="Film">
+                <h2>Filmmaking: Detracted Minds</h2>
+                <p>
+                    Similar to Animation, I had done 2 semesters of Filmmaking, and this 
+                    was my final assignment for Filmmaking 2. With the help of Lucciano Vezina,
+                    along with many others, we were able to get together an 8-minute-long short movie
+                    that, while it may have its flaws, is still an amazing piece of work for my first
+                    attempt at a short movie.
+                </p>
+            </div>
+            <iframe id="FilmVideo" src="https://www.youtube.com/embed/D-LhSjYk6OQ"></iframe>
+
+            <div class="Work" id="Prog">
+                <h2>Programming: Let's Box</h2>
+                <p>
+                    When I entered into the computer science program, I was asked to make a game for my programming class.
+                    Here is a screenshot of what the game looks like in its 'Very Alpha' state. It was great to make and
+                    is the most advanced project I have worked on in the Computer Science Program. You can download and
+                    play the game by simply clicking on the image.
+                </p>
+            </div>
+            <p id="ProgImage">
+                <a href="assets/Game-apalooza Final Copy.exe" download>
+                    <img src="assets/LB-2.png">
+                </a>
+            </p>
+        </div>
+    </section>
+</body>
+</html>
