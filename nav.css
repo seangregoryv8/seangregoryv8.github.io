@@ -1,8 +1,8 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html, body { height: 100%; }
+html { height: 100%; }
 
-body { position: relative; }
+body { height: 100%; background-image: url("./assets/ShadowImage.jpg"); }
 
 nav
 {
@@ -12,24 +12,37 @@ nav
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(144, 238, 144, 0.5);
+    background-color: #00239c;
+    opacity: 0.9;
     padding: 2rem 1.15rem 2rem 1.15rem;
     z-index: 1;
 }
-nav #name
+nav #nameAndEmail
 {
+    display: flex;
+    justify-content: space-between;
+}
+nav #nameAndEmail #name
+{
+    color: white;
     font-weight: 700;
     margin-bottom: 10px;
-    font-size: 50px;
+    font-size: xx-large;
 }
-nav #email
+nav #nameAndEmail #email
 {
+    color: white;
+    font-weight: 700;
     font-size: xx-large;
     padding-bottom: 10px;
 }
-nav #email a
+nav #nameAndEmail #email a:hover
 {
-    color: black;
+    color: aqua;
+}
+nav #nameAndEmail #email a
+{
+    color: white;
     text-decoration: none;
 }
 nav ul
@@ -38,20 +51,23 @@ nav ul
     justify-content: center;
     list-style: none;
 }
-nav ul li { text-align: center; }
+nav ul li
+{ 
+    text-align: center;
+}
 nav p { text-align: center;}
 nav ul a
 {
     margin-right: 20px;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: white;
     font-size: x-large;
     padding: 0 0 0 1.15rem;
 }
 
 .Current
 {
-    color: blue;
+    color: aqua;
     font-weight: 900;
 }
 
@@ -75,17 +91,22 @@ footer #email a
 /* Phone Viewing */
 @media only screen and (max-width: 600px)
 {
-    nav { position: inherit;}
-    nav #name
+    nav { position: sticky;}
+    nav #nameAndEmail
+    {
+        display: block;
+    }
+    nav #nameAndEmail #name
     {
         font-weight: 500;
         margin-bottom: 10px;
-        font-size: 35px;
+        font-size: 25px;
     }
-    nav #email
+    nav #nameAndEmail #email
     {
-        font-size: x-large;
-        padding-bottom: 10px;
+        font-weight: 500;
+        font-size: 25px;
+        padding-bottom: 5px;
     }
     nav #email a
     {
@@ -110,7 +131,7 @@ footer #email a
         margin-right: 20px;
         text-decoration: none;
         color: rgb(0, 0, 0);
-        font-size: x-large;
+        font-size: 14px;
         padding: 0 0 0 1.15rem;
     }
 }
