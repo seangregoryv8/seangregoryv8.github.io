@@ -1,8 +1,17 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 html { height: 100%; }
 
-body { height: 100%; background-image: url("./assets/ShadowImage.jpg"); }
+body
+{
+    height: 100%;
+    background-image: url("./assets/ShadowImage.jpg");
+}
 
 nav
 {
@@ -22,24 +31,21 @@ nav #nameAndEmail
     display: flex;
     justify-content: space-between;
 }
-nav #nameAndEmail #name
+#name, #email
 {
     color: white;
     font-weight: 700;
     margin-bottom: 10px;
     font-size: xx-large;
 }
-nav #nameAndEmail #email
+#email a:hover
 {
-    color: white;
-    font-weight: 700;
-    font-size: xx-large;
-    padding-bottom: 10px;
+    animation-name: fadeInColor;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.75s;
 }
-nav #nameAndEmail #email a:hover
-{
-    color: aqua;
-}
+
 nav #nameAndEmail #email a
 {
     color: white;
@@ -134,4 +140,16 @@ footer #email a
         font-size: 14px;
         padding: 0 0 0 1.15rem;
     }
+}
+
+@keyframes fadeInOpacity
+{
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInColor
+{
+    0% { color: white; }
+    100% { color: aqua; }
 }

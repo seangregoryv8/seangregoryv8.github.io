@@ -16,16 +16,20 @@
             text-align: center;
             background-color: black;
         }
-        #ShadowImage
+
+        #Page
         {
-            display: grid;
-            grid-template-rows: repeat(4, 300px); /* Increase for more spaces to add more examples */
-            grid-template-columns: 60% 40%;
             background-image: url("./assets/HeroImage.jpg");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             background-blend-mode: color;
+        }
+        #ShadowImage
+        {
+            display: grid;
+            grid-template-rows: repeat(4, 300px); /* Increase for more spaces to add more examples */
+            grid-template-columns: 60% 40%;
         }
 
         .Work
@@ -139,73 +143,76 @@
             #ProgImage      { grid-row: 8; }
         }
     </style>
+    <script src="index.js"></script>
 </head>
 <body>
-    <nav>
-        <div id="nameAndEmail">
-            <p id="name">Sean Gregory</p>
-            <p id="email"><a href="mailto:seangregoryv8@gmail.com" class="contactboxlink">E-mail: seangregoryv8@gmail.com</a></p>
-        </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="NewInspirations.html">My Inspirations</a></li>
-            <li><a class="Current" href="#">My Portfolio</a></li>
-            <li><a href="https://github.com/seangregoryv8">GitHub</a></li>
-        </ul>
-    </nav>
-    <section>
-        <h2 id="MyWorks">My Portfolio</h2>
-        <div id="ShadowImage">
-            <div class="Work" id="Web">
-                <h2>Programming: Cube</h2>
-                <p>
-                    In Web Programming 1, I was given the task of making a game in Javascript canvas,
-                    and produced a title that I would call my greatest programming achievement yet.
+    <div id="Page">
+        <nav>
+            <div id="nameAndEmail">
+                <p id="name">Sean Gregory</p>
+                <p id="email"><a href="mailto:seangregoryv8@gmail.com" class="contactboxlink">E-mail: seangregoryv8@gmail.com</a></p>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="NewInspirations.html">My Inspirations</a></li>
+                <li><a class="Current" href="#">My Portfolio</a></li>
+                <li><a href="https://github.com/seangregoryv8">GitHub</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2 id="MyWorks">My Portfolio</h2>
+            <div id="ShadowImage">
+                <div class="Work" id="Web">
+                    <h2>Programming: Cube</h2>
+                    <p>
+                        In Web Programming 1, I was given the task of making a game in Javascript canvas,
+                        and produced a title that I would call my greatest programming achievement yet.
+                    </p>
+                </div>
+                <p id="WebImage">
+                    <a href="Project/3W5_Gregory_S/index.html">
+                        Play it here!
+                    </a>
+                </p>
+    
+                <div class="Work" id="Animation">
+                    <h2>Animation: Climate's Graveyard</h2>
+                    <p>
+                        This was my final project for my college Animation class, and
+                        the start of something amazing for me, as it is my proudest
+                        piece of work to date.
+                    </p>
+                </div>
+                <iframe id="AnimationVideo" src="https://www.youtube.com/embed/TddHRwtS9-0"></iframe>
+    
+                <div class="Work" id="Film">
+                    <h2>Filmmaking: Detracted Minds</h2>
+                    <p>
+                        Similar to Animation, I had done 2 semesters of Filmmaking, and this 
+                        was my final assignment for Filmmaking 2. With the help of Lucciano Vezina,
+                        along with many others, we were able to get together an 8-minute-long short movie
+                        that, while it may have its flaws, is still an amazing piece of work for my first
+                        attempt at a short movie.
+                    </p>
+                </div>
+                <iframe id="FilmVideo" src="https://www.youtube.com/embed/D-LhSjYk6OQ"></iframe>
+    
+                <div class="Work" id="Prog">
+                    <h2>Programming: Let's Box</h2>
+                    <p>
+                        When I entered into the computer science program, I was asked to make a game for my programming class.
+                        Here is a screenshot of what the game looks like in its 'Very Alpha' state. It was great to make and
+                        is the most advanced project I have worked on in the Computer Science Program. You can download and
+                        play the game by simply clicking on the image.
+                    </p>
+                </div>
+                <p id="ProgImage">
+                    <a href="assets/Game-apalooza Final Copy.exe" download>
+                        <img src="assets/LB-2.png">
+                    </a>
                 </p>
             </div>
-            <p id="WebImage">
-                <a href="Project/3W5_Gregory_S/index.html">
-                    Play it here!
-                </a>
-            </p>
-
-            <div class="Work" id="Animation">
-                <h2>Animation: Climate's Graveyard</h2>
-                <p>
-                    This was my final project for my college Animation class, and
-                    the start of something amazing for me, as it is my proudest
-                    piece of work to date.
-                </p>
-            </div>
-            <iframe id="AnimationVideo" src="https://www.youtube.com/embed/TddHRwtS9-0"></iframe>
-
-            <div class="Work" id="Film">
-                <h2>Filmmaking: Detracted Minds</h2>
-                <p>
-                    Similar to Animation, I had done 2 semesters of Filmmaking, and this 
-                    was my final assignment for Filmmaking 2. With the help of Lucciano Vezina,
-                    along with many others, we were able to get together an 8-minute-long short movie
-                    that, while it may have its flaws, is still an amazing piece of work for my first
-                    attempt at a short movie.
-                </p>
-            </div>
-            <iframe id="FilmVideo" src="https://www.youtube.com/embed/D-LhSjYk6OQ"></iframe>
-
-            <div class="Work" id="Prog">
-                <h2>Programming: Let's Box</h2>
-                <p>
-                    When I entered into the computer science program, I was asked to make a game for my programming class.
-                    Here is a screenshot of what the game looks like in its 'Very Alpha' state. It was great to make and
-                    is the most advanced project I have worked on in the Computer Science Program. You can download and
-                    play the game by simply clicking on the image.
-                </p>
-            </div>
-            <p id="ProgImage">
-                <a href="assets/Game-apalooza Final Copy.exe" download>
-                    <img src="assets/LB-2.png">
-                </a>
-            </p>
-        </div>
-    </section>
+        </section>
+    </div>
 </body>
 </html>
