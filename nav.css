@@ -148,6 +148,12 @@ footer #email a
     100% { opacity: 1; }
 }
 
+@keyframes fadeOutOpacity
+{
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 @keyframes fadeInColor
 {
     0% { color: white; }
