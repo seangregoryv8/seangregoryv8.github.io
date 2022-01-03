@@ -8,10 +8,107 @@ let introduction =
 "trying to take all the insane ideas from my head and find some use for them.\n\n" + 
 "I have always focused a lot on finite detail, and hope to use my combined set of artistic and computer skills to find a job where I can show people just what I can do."
 
-//console.log(document.getElementById("WhoAmI"))
-document.addEventListener("DOMContentLoaded", PreparePage)
-
 function PreparePage()
 {
-    document.getElementById("WhoAmI").innerHTML = introduction;
+    let who = document.getElementById("WhoAmI");
+    if (who != null)
+        who.innerHTML = introduction;
 }
+
+function ClickAway()
+{
+    document.getElementById("WhoAmI").style.animation = "fadeOutOpacity";
+}
+
+function LoadWork()
+{
+
+}
+
+function PlaceWork()
+{
+    let works = document.getElementsByClassName("Piece");
+    if (works != null)
+    {
+        const container = document.getElementById("ShadowImage");
+        container.style.display = `grid`;
+        container.style.gridTemplateRows = `repeat(${works.length}, 300px)`;
+        container.style.gridTemplateColumns = `50% 50%`;
+        
+        for (let i = 0; i < works.length; i++)
+        {
+            works[i].setAttribute("style", `grid-row: ${i}`);
+            console.log(works[i]);
+        }
+
+        works = document.getElementsByClassName("Title")
+        for (let i = 0; i < works.length; i++)
+        {
+            works[i].setAttribute("style",
+            `
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                text-align: center;
+                border-radius: 20px;
+            `);
+        }
+
+        works = document.getElementsByClassName("WorkImage")
+        for (let i = 0; i < works.length; i++)
+        {
+            works[i].setAttribute("style", 
+            `
+                display: block;
+                justify-content: center;
+                margin-bottom: 2rem;
+            `);
+        }
+    }
+}
+
+function NavToAbout()
+{
+    $('html, body').animate({ scrollTop: $("#AboutMeSection").offset().top }, 'fast');
+}
+function NavToWorks()
+{
+    console.log("HI")
+    $('html, body').animate({ scrollTop: $("#PortfolioSection").offset().top }, 'fast');
+}
+
+function PlaceMobileWork()
+{
+    let works = document.getElementsByClassName("Work");
+    if (works != null)
+    {
+        console.log("HI")
+        const container = document.getElementById("ShadowImage");
+        container.style.display = `grid`;
+        container.style.gridTemplateRows = `repeat(${works.length}, auto)`;
+        container.style.gridTemplateColumns = `100%`;
+        for (let i = 0; i < works.length; i++)
+        {
+            works[i].setAttribute("style", `grid-row: ${i}`);
+        }
+
+        works = document.getElementsByClassName("WorkImage");
+        for (let i = 0; i < works.length; i++)
+        {
+            works[i].setAttribute("style", 
+            `
+                margin: 0 auto;
+                grid-column: 1;
+                width: 50%;
+                height: auto;
+                margin-bottom: 5rem;
+            `)
+        }
+    }
+}
+
+document.addEventListener("DOMContentLoaded", PreparePage)
+document.addEventListener("DOMContentLoaded", PlaceWork)
+var x = window.matchMedia("(max-width: 600px)");
+x.addListener(PlaceMobileWork);
