@@ -146,6 +146,7 @@ section h2
     border: 2px solid darkblue;
     display: inline-block;
     border-radius: 0.3em;
+    background-color: darkblue;
     transition: all 0.2s ease-in-out;
     position: relative;
     overflow: hidden;
