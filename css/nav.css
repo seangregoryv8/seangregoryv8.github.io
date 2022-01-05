@@ -143,10 +143,10 @@ section h2
 .button
 {
     padding: 0.75em 2em;
-    border: 2px solid darkblue;
+    border: 2px solid darkred;
     display: inline-block;
     border-radius: 0.3em;
-    background-color: darkblue;
+    background-color: darkred;
     transition: all 0.2s ease-in-out;
     position: relative;
     overflow: hidden;
@@ -155,7 +155,7 @@ section h2
 .button::before
 {
     content: "";
-    background-color: #252b2d;
+    background-color: white;
     height: 100%;
     width: 3em;
     display: block;
@@ -167,12 +167,13 @@ section h2
 
 .button:hover
 {
-    background-color: rgba(92, 68, 68, 0.719);
+    border: 2px solid darkblue;
+    background-color: darkblue;
     border-bottom: 4px solid darken(darkblue, 10%);
 }
 .button:hover::before
 {
-    transform: skewX(-45deg) translateX(13.5em);
+    transform: skewX(-45deg) translateX(14.5em);
     transition: all 0.5s ease-in-out;
 }
 
@@ -219,7 +220,7 @@ footer #email a
 @keyframes sheen
 {
     0% { transform: skewY(-45deg) translateX(0); }
-    100% { transform: skewY(-45deg) translateX(12.5em); }
+    100% { transform: skewY(-60deg) translateX(12.5em); }
 }
 
 @font-face
