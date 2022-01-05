@@ -1,0 +1,60 @@
+/* Phone Viewing */
+@media only screen and (max-width: 600px)
+{
+    nav { position: sticky;}
+    nav #nameAndEmail
+    {
+        display: block;
+    }
+    nav #nameAndEmail #name
+    {
+        font-weight: 500;
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+    nav #nameAndEmail #email
+    {
+        font-weight: 500;
+        font-size: 25px;
+        padding-bottom: 5px;
+    }
+    nav #email a
+    {
+        color: black;
+        text-decoration: none;
+    }
+    nav ul
+    {
+        display: block;
+        justify-content: center;
+        list-style: none;
+        padding-top: 20px;
+    }
+    nav ul li
+    {
+        padding: 3px 0;
+    }
+    nav p { text-align: center;}
+    nav ul a
+    {
+        text-align: center;
+        margin-right: 20px;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        padding: 0 0 0 1.15rem;
+    }
+    section h1
+    {
+        padding-top: 3rem;
+        font-size: 35px;
+    }
+    section h2
+    {
+        font-size: 20px;
+    }
+    div p
+    {
+        padding-bottom: 10rem;
+    }
+}
