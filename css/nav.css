@@ -132,6 +132,12 @@ section h2
     box-shadow: 0 0 10px 0 darkblue inset, 0 0 10px 4px darkblue;
 }
 
+.WebButton a
+{
+    text-decoration: none;
+    color: white;
+}
+
 /* Nav bar buttons */
 
 .button
@@ -144,6 +150,7 @@ section h2
     position: relative;
     overflow: hidden;
 }
+
 .button::before
 {
     content: "";
