@@ -74,7 +74,6 @@ function NavToAbout()
 }
 function NavToWorks()
 {
-    console.log("HI")
     $('html, body').animate({ scrollTop: $("#PortfolioSection").offset().top }, 'fast');
 }
 

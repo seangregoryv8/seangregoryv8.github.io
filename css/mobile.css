@@ -1,3 +1,13 @@
+/* Tablet Viewing */
+
+@media only screen and (max-width: 960px)
+{
+    ul li div div
+    {
+        width: 0px;
+    }
+}
+
 /* Phone Viewing */
 @media only screen and (max-width: 600px)
 {
