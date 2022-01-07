@@ -1,5 +1,5 @@
 let introduction = 
-"I'm an artistically inclined John Abbott College computer science student with a keen eye for storytelling and finite attention to detail. " + 
+"I am a John Abbott College computer science student with a keen eye for the arts, storytelling and finite attention to detail. " + 
 "I always make sure everything I put out is my best work, and never hesitate to sink hundreds of hours into a project to achieve such. I seek " +
 "to use my combination of art and computer skills in whatever I do, in the hopes of fabricating something truly amazing and bigger than myself " + 
 "that I could be proud of for the rest of my life.\n\n" + 
