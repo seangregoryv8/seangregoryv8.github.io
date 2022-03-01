@@ -1,17 +1,33 @@
 /* Tablet Viewing */
 
-@media only screen and (max-width: 960px)
+/*@media only screen and (max-width: 960px)
 {
     ul li div div
     {
         width: 0px;
     }
-}
+}*/
 
 /* Phone Viewing */
 @media only screen and (max-width: 600px)
 {
-    nav { position: sticky;}
+    body
+    {
+        display: block;
+        grid-template-rows: 10% 90%;
+    }
+    nav
+    {
+        grid-row: 1;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 20%;
+    }
+    .wrapper
+    {
+        grid-row: 2;
+    }
     nav #nameAndEmail
     {
         display: block;
@@ -62,9 +78,5 @@
     section h2
     {
         font-size: 20px;
-    }
-    div p
-    {
-        padding-bottom: 10rem;
     }
 }

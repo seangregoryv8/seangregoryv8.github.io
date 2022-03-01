@@ -15,16 +15,6 @@ function PreparePage()
         who.innerHTML = introduction;
 }
 
-function ClickAway()
-{
-    document.getElementById("WhoAmI").style.animation = "fadeOutOpacity";
-}
-
-function LoadWork()
-{
-
-}
-
 function PlaceWork()
 {
     let works = document.getElementsByClassName("Piece");
