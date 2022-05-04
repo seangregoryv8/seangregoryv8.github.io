@@ -1,4 +1,4 @@
-@media only screen and (min-width: 960px)
+@media only screen and (min-width: 1160px)
 {
     *
     {
@@ -19,6 +19,103 @@
         height: 100%;
         display: grid;
         grid-template-columns: 30% auto;
+    }
+    .all
+    {
+        grid-column: 2;
+        padding: 2rem;
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+    }
+    
+    section
+    {
+        grid-column: 2;
+        animation-name: fadeInOpacity;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 0.75s;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: block;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    section h1
+    {
+        text-align: center;
+        font-size: 4rem;
+    }
+    section h2
+    {
+        text-align: center;
+    }
+    
+    .WebButton
+    {
+        justify-items: center;
+        text-align: center;
+        padding: 1.5rem;
+        font-size: 36px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        background-color: darkblue;
+        border: 2px darkblue;
+        border-radius: 40px 0px 40px 40px;
+        box-shadow: 0 0 40px 40px darkblue inset, 0 0 0 0 darkblue;
+        transition: all 150ms ease-in-out;
+    }
+    
+    .WebButton:hover
+    {
+        color: black;
+        background-color: white;
+        box-shadow: 0 0 10px 0 darkblue inset, 0 0 10px 4px darkblue;
+    }
+    
+    .WebButton a
+    {
+        text-decoration: none;
+        color: white;
+    }
+    
+    iframe
+    {
+        frameborder: 0;
+    }
+    
+    #introduction
+    {
+        text-align: center;
+        margin-top: 60px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    #introduction h2 { padding-bottom: 30px; }
+    
+    #introduction p
+    {
+        padding: 20px;
+    }
+    
+    footer
+    {
+        position: absolute;
+        bottom: 10px;
+        text-align: center;
+    }
+    footer p
+    {
+        color: white;
+        font-size: 20px;
+    }
+    footer #email a
+    {
+        color: white;
+        text-decoration: none;
     }
     nav
     {
