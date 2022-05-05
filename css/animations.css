@@ -1,0 +1,42 @@
+@keyframes jump
+{
+    0% { top: 0px; }
+    50% { top: 50px; }
+    100% { top: 0px; }
+}
+@keyframes fadeInOpacity
+{
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fadeOutOpacity
+{
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@keyframes fadeInColor
+{
+    0% { color: lightgray; }
+    100% { color: lightcoral; }
+}
+@keyframes sheen
+{
+    0% { transform: skewY(-45deg) translateX(0); }
+    100% { transform: skewY(-60deg) translateX(12.5em); }
+}
+
+@font-face
+{
+    font-family: Hacked;
+    src: url("./assets/fonts/hacked-font/Hacked-KerX.ttf");
+}
+@font-face
+{
+    font-family: QuickSilver;
+    src: url("./assets/fonts/quicksilver-font/Quicksilver-3z2OL.ttf");
+}
+@font-face
+{
+    font-family: QuickSilverItalic;
+    src: url("./assets/fonts/quicksilver-font/QuicksilverItalic-OV9Z4.ttf");
+}
