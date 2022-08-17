@@ -44,9 +44,13 @@
         background-size: cover;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
-    section h1
+    .content
     {
         text-align: center;
+    }
+    .inner
+    {
+        display: inline-block;
         font-size: 4rem;
     }
     section h2
