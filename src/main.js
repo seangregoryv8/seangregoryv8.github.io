@@ -190,7 +190,7 @@ if (window.location.href.indexOf("item.html") == -1)
 }
 
 await getData();
-if (window.location.href.indexOf("index.html") != -1)
+if (window.location.href.indexOf("index.html") != -1 || window.location.href.indexOf("seangregoryv8.github.io") != -1)
 {
     resizeTitle();
     getAboutMe();
