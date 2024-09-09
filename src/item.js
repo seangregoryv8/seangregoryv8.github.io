@@ -55,7 +55,8 @@ data.description.forEach(desc =>
     description.appendChild(br);
 });
 
-document.getElementsByClassName("contentBox")[0].style.backgroundImage = `url('../../images/borders/border-${getRandomNumber(1, 4)}.svg')`
+if (window.innerWidth >= 600)
+    document.getElementsByClassName("contentBox")[0].style.backgroundImage = `url('../../images/borders/border-${getRandomNumber(1, 4)}.svg')`
 
 function formulateButton()
 {
@@ -73,7 +74,6 @@ function formulateButton()
             p = document.createElement("p");
             p.innerHTML = `Length: ${minutes}:${seconds}`
             p.style.color = jsonColours.buttonBorder;
-            p.style.fontSize = "36px";
             description.appendChild(p);
         break;
         case "game":
@@ -91,7 +91,6 @@ function formulateButton()
 
             p.innerHTML = p.innerHTML.substring(0, p.innerHTML.length - 1);
             p.style.color = jsonColours.buttonBorder;
-            p.style.fontSize = "36px";
             description.appendChild(p);
         break;
     }

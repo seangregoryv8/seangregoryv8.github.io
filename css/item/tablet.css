@@ -1,29 +1,30 @@
-@media only screen and (min-width: 1160px)
+@media only screen and (max-width: 1160px) and (min-width: 600px)
 {
     .contentBox
     {
         position: absolute;
-        top: 20%;
-        right: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         height: 70%;
         width: 70%;
     }
 
     .contentTitle
     {
-        font-size: 60px;
+        font-size: 48px;
         font-family: "ParkLane";
         margin: 0 20%;
     }
 
     .contentDesc
     {
-        font-size: 26px;
+        font-size: 18px;
         margin: 0 10%;
     }
     .contentLink
     {
         font-size: 30px;
-        padding: 10px 5em;
+        padding: 5px 3em;
     }
 }
