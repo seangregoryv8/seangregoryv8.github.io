@@ -1,0 +1,35 @@
+@media only screen and (min-width: 1160px)
+{
+    .computerTitle
+    {
+        font-size: 60px;
+        color: white;
+    }
+
+    .aboutMeContainer
+    {
+        margin: 0 10%;
+        display: grid;
+        grid-template-columns: 70% auto;
+    }
+    .aboutLanguagesSection, .explanationSection
+    {
+        margin: 0 10%;
+    }
+    .aboutMeTitle, .aboutLanguagesTitle
+    {
+        font-size: 50px;
+    }
+
+    .explanationSection h2
+    {
+        font-size: 30px;
+        margin-bottom: 2em;
+    }
+
+    .allLanguages
+    {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}

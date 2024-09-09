@@ -1,0 +1,60 @@
+@media only screen and (max-width: 600px)
+{
+    .explanationTitle
+    {
+        margin: 0 5%;
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: "Broadmoor";
+    }
+    .navBarOptions
+    {
+        display: grid;
+        grid-template-columns: 10% auto 10%;
+        grid-template-rows: auto auto;
+    }
+    .compWrapper
+    {
+        grid-column: 2;
+    }
+    .artWrapper
+    {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    
+    .list
+    {
+        margin: 0 10%;
+    }
+
+    .navBarOptions div
+    {
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .item
+    {
+        background-color: rgb(40, 40, 40, 0.5);
+        height: 15em;
+        margin: 15px 30px;
+        padding: 20px 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+    }
+    
+    #itemTitle
+    {
+        height: 100%;
+        font-size: 30px;
+        font-family: "ParkLane";
+        margin: 15% 10%;
+    }
+    
+    .itemImage
+    {
+        visibility: hidden;
+    }
+}

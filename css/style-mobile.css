@@ -1,0 +1,38 @@
+@media only screen and (max-width: 600px)
+{
+    .computerTitle
+    {
+        font-size: 30px;
+        color: white;
+    }
+    
+    .navBarOptions
+    {
+        display: grid;
+        grid-template-columns: 10% auto 5% auto 10%;
+    }
+    
+    .navBarOptions div
+    {
+        font-size: 24px;
+        text-align: center;
+    }
+    .aboutMeSection, .aboutLanguagesSection
+    {
+        margin: 0 10%;
+        text-align: center;
+    }
+    .aboutMeTitle, .aboutLanguagesTitle
+    {
+        font-size: 50px;
+    }
+    .aboutMeSection button
+    {
+        margin: 15px auto;
+        display: block;
+    }
+    .aboutMeImage
+    {
+        visibility: hidden;
+    }
+}

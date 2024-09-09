@@ -1,0 +1,62 @@
+{
+    "detractedMinds":
+    {
+        "type": "film",
+        "images": "detracted",
+        "description": 
+        [
+            "This film, dealing with addiction and a theatrical look into ADHD, this short movie was my first journey into cinematography.",
+            "Directed, edited, and starring myself, it stands tall in sound design, and starts my journey into the artistic side."
+        ],
+        "source": "https://www.youtube.com/watch?v=D-LhSjYk6OQ",
+        "length": 413
+    },
+    "climatesGraveyard":
+    {
+        "type": "film",
+        "images": "graveyard",
+        "description": 
+        [
+            "My first from-scratch animation, using ToonBoom, this project still stands as a warning against the dangers of the climate crisis.",
+            "Made in 2019, this was done at the same time as Detracted Minds, showing my jack-of-all-trades and creative reach."
+        ],
+        "source": "https://www.youtube.com/watch?v=TddHRwtS9-0",
+        "length": 68
+    },
+    "panicAtWork":
+    {
+        "type": "film",
+        "images": "panic",
+        "description": 
+        [
+            "My longest film to date, this film was made in just shy of a month for a school project to demonstrate workplace conflict and resolution.",
+            "This was a challenge in patience and determination, as well as a blast to film with its sharp editing comparative to the likes of Edgar Wright."
+        ],
+        "source": "https://www.youtube.com/watch?v=ec7sxfQYLM8",
+        "length": 1438
+    },
+    "danceWithMe":
+    {
+        "type": "film",
+        "images": "dance",
+        "description": 
+        [
+            "Made in half a year, this short movie tells the tale of a scientist in the wrong place at the wrong time.",
+            "Using a mix of animation and live action, clever sound design, experimental editing practices, and gripping analog horror elements, you're sure not to sleep tonight after watching."
+        ],
+        "source": "https://www.youtube.com/watch?v=SeM4JTgRFSA",
+        "length": 626
+    },
+    "derivativesInOneMinute":
+    {
+        "type": "film",
+        "images": "derivatives",
+        "description": 
+        [
+            "Made for a university math competition, I tried my hand at making a short & educational video to explain derivatives.",
+            "This was a lot of fun to make, and shows my style as a sharp and sophisticated style."
+        ],
+        "source": "https://www.youtube.com/watch?v=dMUK1vo1PuA",
+        "length": 61
+    }
+}

@@ -1,0 +1,166 @@
+{
+    "refurbishedImmortality":
+    {
+        "type": "game",
+        "images": "refurbished",
+        "description": 
+        [
+            "This website, made entirely in base JavaScript, attempts to recreate the authentic feel of a 1970s VCR, with an added ARG storyline within.",
+            "It also contains 6 videos, all done by myself as well, and was initially meant to go along with Dance With Me in its story."
+        ],
+        "languages": 
+        [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "source": "https://seangregoryv8.github.io/RefurbishedImmortality/"
+    },
+    "heavenJumper":
+    {
+        "type": "game",
+        "images": "heaven",
+        "description": 
+        [
+            "The biggest JS Canvas project to date, this tells the story of a small man and his trip up to the heavens, training to become a warrior of God.",
+            "Code library provided by LINK."
+        ],
+        "descriptionLinks":
+        [
+            "https://github.com/VikramSinghMTL"
+        ],
+        "languages": 
+        [
+            "HTML",
+            "CSS",
+            "JavaScript Canvas",
+            "JSON"
+        ],
+        "source": "https://seangregoryv8.github.io/HeavenHumper/"
+    },
+    "cube":
+    {
+        "type": "game",
+        "images": "cube",
+        "description": 
+        [
+            "Inspired by the 1997 movie of the same name, this game involves a player entering through different rooms, gathering artifacts, while avoiding the deadly traps that lay ahead.",
+            "This was my first game ever made using Javascript Canvas."
+        ],
+        "languages": 
+        [
+            "HTML",
+            "CSS",
+            "JavaScript Canvas"
+        ],
+        "source": "https://seangregoryv8.github.io/3W5_Gregory_S/"
+    },
+    "letsBox":
+    {
+        "type": "game",
+        "images": "box",
+        "description": 
+        [
+            "This is the first computer game I ever created, using only C#.",
+            "A simple puzzle game, you play the role of a daring adventurer, journeying to find the lone fisherman at the end of the road.",
+            "A new version using either JavaScript or another language will be coming out soon."
+        ],
+        "languages": 
+        [
+            "C#"
+        ],
+        "source": "https://seangregoryv8.github.io/3W5_Gregory_S/"
+    },
+    "madnessZombieHorde":
+    {
+        "type": "game",
+        "images": "madness",
+        "description": 
+        [
+            "Inspired by the 1997 movie of the same name, this game involves a player entering through different rooms, gathering artifacts, while avoiding the deadly traps that lay ahead.",
+            "This was my first game ever made using Javascript Canvas."
+        ],
+        "languages": 
+        [
+            "HTML",
+            "CSS",
+            "JavaScript Canvas"
+        ],
+        "source": "https://seangregoryv8.github.io/3W5_Gregory_S/"
+    },
+    "masterTracker":
+    {
+        "type": "website",
+        "description": "This is my first portfolio item. Look at how badass it is!",
+        "languages": 
+        [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "preview": "./images/refurbished.png",
+        "source": "https://seangregoryv8.github.io/RefurbishedImmortality/"
+    },
+    "helloWorldNews":
+    {
+        "type": "game",
+        "images": "news",
+        "description": 
+        [
+            "Inspired by the 1997 movie of the same name, this game involves a player entering through different rooms, gathering artifacts, while avoiding the deadly traps that lay ahead.",
+            "This was my first game ever made using Javascript Canvas."
+        ],
+        "languages": 
+        [
+            "HTML",
+            "CSS",
+            "JavaScript Canvas"
+        ],
+        "source": "https://seangregoryv8.github.io/3W5_Gregory_S/"
+    },
+    "slotMachine":
+    {
+        "type": "website",
+        "description": "This is my first portfolio item. Look at how badass it is!",
+        "languages": 
+        [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "preview": "./images/refurbished.png",
+        "source": "https://seangregoryv8.github.io/RefurbishedImmortality/"
+    },
+    "plantChecker":
+    {
+        "type": "website",
+        "description": "This is my first portfolio item. Look at how badass it is!",
+        "languages": 
+        [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "preview": "./images/refurbished.png",
+        "source": "https://seangregoryv8.github.io/RefurbishedImmortality/"
+    },
+    "pizzaShop":
+    {
+        "type": "website",
+        "images": "pizza",
+        "description": 
+        [
+            "A pizza restaurant website designed for the Fall 2021 Web Programming III course.",
+            "This website demonstrates the C-R-U-D operations in a database, as well as showcasing more creative elements.",
+            "I was in charge of mostly the front-end and part functionality, done alongside <"
+        ],
+        "languages": 
+        [
+            "C#",
+            ".NET Core MVC",
+            "Entity Framework Core"
+        ],
+        "preview": "./images/refurbished.png",
+        "source": "https://seangregoryv8.github.io/RefurbishedImmortality/"
+    }
+}

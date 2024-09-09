@@ -1,0 +1,66 @@
+@media only screen and (min-width: 1160px)
+{
+    .explanationTitle
+    {
+        margin-bottom: 20px;
+        font-family: "Broadmoor";
+    }
+
+    .navBarOptions
+    {
+        display: grid;
+        grid-template-columns: 10% auto 5% auto 10%;
+    }
+    .compWrapper
+    {
+        grid-column: 2;
+    }
+    .artWrapper
+    {
+        grid-column: 4;
+    }
+    
+    .list
+    {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .navBarOptions div
+    {
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .item
+    {
+        background-color: rgb(40, 40, 40);
+        height: 25em;
+        margin: 15px 30px;
+        padding: 20px 0;
+        display: grid;
+        grid-template-rows: 80% 20%;
+        justify-items: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+    }
+    #itemTitle
+    {
+        grid-row: 2;
+        height: 100%;
+        font-size: 30px;
+        font-family: "ParkLane";
+    }
+
+    
+    .itemImage
+    {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 45%;
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,42 @@
+/* Nav bar buttons */
+.button
+{
+    padding: 0.75em 2em;
+    border: 2px solid darkred;
+    display: inline-block;
+    border-radius: 0.3em;
+    background-color: darkred;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    width: 100%;
+    font-family: "Broadmoor";
+}
+
+.button::before
+{
+    content: "";
+    background-color: white;
+    height: 100%;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.5em;
+    transform: skewX(-45deg) translateX(0);
+}
+
+.button:hover
+{
+    border: 2px solid darkblue;
+    background-color: darkblue;
+    border-bottom: 4px solid darken(darkblue, 10%);
+}
+.button:hover::before
+{
+    transform: skewX(-45deg) translateX(40.5em);
+    transition: all 0.5s ease-in-out;
+}
+
+/* End of Nav Bar buttons */

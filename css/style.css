@@ -1,0 +1,80 @@
+@font-face
+{
+    font-family: "ParkLane";
+    src: url("../fonts/parklane.regular.ttf") format('truetype');
+}
+
+@font-face
+{
+    font-family: "Broadmoor";
+    src: url("../fonts/BroadmoorBold.otf") format('truetype');
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+.title
+{
+    background-image: url("../images/test.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 50% 90%, 0 80%);
+}
+
+.computerTitle
+{
+    font-family: "ParkLane";
+}
+
+.aboutMeSection, .aboutLanguagesSection, .explanationSection
+{
+    color: white;
+}
+
+.aboutMeSection button
+{
+    background-color: transparent;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.aboutMeTitle, .aboutLanguagesTitle
+{
+    font-family: "ParkLane"
+}
+
+.aboutMeDescription, .aboutLangaugesDescription
+{
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.allLanguages p
+{
+    color: white;
+    font-size: 24px;
+    margin: 10px;
+    padding: 20px;
+    font-family: "Broadmoor";
+}
+
+button a
+{
+    text-decoration: none;
+}

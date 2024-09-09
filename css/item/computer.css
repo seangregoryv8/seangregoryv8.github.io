@@ -1,0 +1,28 @@
+@media only screen and (min-width: 1160px)
+{
+    .contentBox
+    {
+        position: absolute;
+        top: 20%;
+        right: 0;
+        height: 70%;
+        width: 70%;
+    }
+
+    .contentTitle
+    {
+        font-size: 60px;
+        font-family: "ParkLane";
+        margin: 0 20%;
+    }
+
+    .contentDesc
+    {
+        font-size: 26px;
+        margin: 0 10%;
+    }
+    .contentLink
+    {
+        font-size: 30px;
+    }
+}

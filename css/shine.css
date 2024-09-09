@@ -1,0 +1,28 @@
+.shine
+{
+    font-size: 0.5em;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.shine
+{
+    background: orange   -webkit-gradient(linear, left top, right top, from(orange), to(orange), color-stop(0.5, #fff)) 0 0 no-repeat;
+    -webkit-background-size: 160px;  color: rgba(255, 255, 255, 0.3);
+    -webkit-background-clip: text;
+    -webkit-animation-name: shine;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    text-shadow: 0 0px 0px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes shine
+{
+    0%,5%     {    background-position: -150%;  }
+    35%       {    background-position: 100%;  }
+    100%      {    background-position: 600%;  }
+}
