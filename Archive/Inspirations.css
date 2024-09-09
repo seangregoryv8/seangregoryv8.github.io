@@ -1,0 +1,122 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: black;
+}
+nav
+{
+    display: grid;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(144, 238, 144, 0.781);
+    padding: 2rem 1.15rem 2rem 1.15rem;
+    z-index: 1;
+}
+nav p
+{
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: xx-large;
+}
+nav ul
+{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+nav ul a
+{
+    margin-right: 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    padding: 0 0 0 1.15rem;
+}
+
+section
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+}
+section h1
+{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 40px;
+}
+.container
+{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, 40rem);
+    grid-gap: 80px;
+    justify-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.child img
+{
+    width: 640px;
+    height: 340px;
+    overflow: hidden;
+}
+.child p
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 2rem;
+}
+.Current
+{
+    color: blue;
+    font-weight: 900;
+}
+@media only screen and (max-width: 1076px)
+{
+    .container
+    {
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 100%;
+    }
+    .container .Image
+    {
+        text-align: center;
+    }
+    .child p
+    {
+        margin-left: 8%;
+        margin-right: 8%;
+        font-size: 16px;
+        line-height: 1.75rem;
+    }
+}
+@media only screen and (max-width: 550px)
+{
+    nav ul
+    {
+        display: block;
+    }
+    nav ul a
+    {
+        margin-right: 0;
+        padding: 0 0 0 10rem;
+    }
+    .child p
+    {
+        font-size: 12px;
+        line-height: 1.5rem;
+    };
+}

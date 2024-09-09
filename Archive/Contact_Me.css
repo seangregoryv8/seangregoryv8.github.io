@@ -1,0 +1,100 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: black;
+}
+/* Nav */
+body { background-color: black; }
+nav
+{
+    display: grid;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(144, 238, 144, 0.781);
+    padding: 2rem 1.15rem 2rem 1.15rem;
+    z-index: 1;
+}
+nav p
+{
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: xx-large;
+}
+nav ul
+{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+nav ul a
+{
+    margin-right: 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    padding: 0 0 0 1.15rem;
+}
+/* End of Nav */
+section
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+}
+section .bg
+{
+    background-image: url("assets/ContactImage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section div
+{
+    margin-bottom: 10px;
+}
+label
+{
+    font-size: 24px;
+    text-align: center;
+}
+input
+{
+    padding: 15px;
+    text-align: center;
+    max-width: 400px;
+}
+select
+{
+    padding: 10px;
+}
+section h2
+{
+    font-size: 36px;
+    background-color: black;
+}
+.Current
+{
+    color: blue;
+    font-weight: 900;
+}
+@media only screen and (max-width: 550px)
+{
+    nav ul
+    {
+        display: block;
+    }
+    nav ul a
+    {
+        margin-right: 0;
+    }
+}
