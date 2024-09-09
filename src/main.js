@@ -190,13 +190,9 @@ if (window.location.href.indexOf("item.html") == -1)
 }
 
 await getData();
-if (window.location.href.indexOf("seangregoryv8.github.io/") == -1)
+if (window.location.href.indexOf("portfolio.html") != -1)
 {
-    resizeTitle();
-    getAboutMe();
-}
-else if (window.location.href.indexOf("portfolio.html") != -1)
-{
+    console.log("PORTFOLIO")
     getPortfolioExplanations();
     resizeTitle();
     let buttonClick = window.location.href.split("#")[1];
@@ -211,6 +207,12 @@ else if (window.location.href.indexOf("portfolio.html") != -1)
             case "art": showData("Filmmaking")
         }
     }
+}
+else if (window.location.href.indexOf("item.html") == -1)
+{
+    console.log("TITLE")
+    resizeTitle();
+    getAboutMe();
 }
 
 colourButtons();
