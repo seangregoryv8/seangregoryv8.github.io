@@ -1,4 +1,4 @@
-import { changeLanguage, getLanguage, jsonColours } from "./main.js";
+import { changeLanguage, getLanguage, interactiveClicking, jsonColours } from "./main.js";
 
 function resizeNav()
 {
@@ -10,12 +10,11 @@ function resizeNav()
 
     document.getElementsByTagName("nav")[0].style.backgroundColor = jsonColours.navbar;
 
-
     let options = document.getElementsByClassName("dropdown")[0];
     options.innerHTML = "";
     if (width >= 1160)
     {
-        makeTags(["Home", "Projects", "GitHub", "Contact"], options);
+        makeTags(["Home", "Projects", "GitHub", "Contact"], options, false);
         makeLanguageToggle(options, false);
     }
     else
@@ -24,7 +23,7 @@ function resizeNav()
         imgTag.classList.add("dropbtn");
         imgTag.src = "./icons/menu.png";
         imgTag.width = 50;
-        imgTag.align = "right";
+        imgTag.align = "left";
         options.appendChild(imgTag);
 
         imgTag.addEventListener("click", () => 
@@ -35,7 +34,7 @@ function resizeNav()
                 let divtag = document.createElement("div");
                 divtag.classList.add("dropdown-content");
         
-                makeTags(["Home", "Projects", "GitHub", "Contact"], divtag);
+                makeTags(["Home", "Projects", "GitHub", "Contact"], divtag, true);
                 makeLanguageToggle(divtag, true);
 
                 options.appendChild(divtag);
@@ -44,7 +43,7 @@ function resizeNav()
             }
             else
             {
-                nav.style.height = "96px";
+                nav.style.height = "auto";
                 
                 options.removeChild(options.children[1]);
             }
@@ -55,15 +54,17 @@ function resizeNav()
  * 
  * @param {string[]} tags 
  * @param {HTMLDivElement} divtag
+ * @param {boolean} mobile
  */
-function makeTags(tags, divtag)
+function makeTags(tags, divtag, mobile)
 {
     for (let i = 0; i < tags.length; i++)
     {
         let a = document.createElement("a");
         a.innerHTML = tags[i];
-        a.style.textAlign = "right";
+        a.style.textAlign = mobile ? "left" : "right";
         a.style.marginRight = "10px";
+        interactiveClicking(a);
         if (a.innerHTML == "GitHub") a.addEventListener("click", () => window.open("https://github.com/seangregoryv8").focus())
         if (a.innerHTML == "Projects") a.href = "./portfolio.html"
         if (a.innerHTML == "Contact") a.href = "./contact.html"
@@ -82,15 +83,16 @@ function makeLanguageToggle(tag, mobile)
     div.classList.add("language-dropdown");
     div.style.margin = mobile ? "0" : "20px";
 
-    let label = document.createElement("label");
-    label.setAttribute('for', "language-select");
-    div.appendChild(label);
+    //let label = document.createElement("label");
+    //label.setAttribute('for', "language-select");
+    //div.appendChild(label);
 
     let button = document.createElement("button");
     button.style.backgroundColor = "transparent";
     button.style.fontSize = mobile ? "20px" : "24px";
     button.style.color = "white";
     button.style.border = "none";
+    button.style.textAlign = mobile ? "left" : "center";
     let setLanguage = getLanguage();
     console.log("Language: " + setLanguage)
     button.innerHTML = setLanguage;
@@ -99,6 +101,7 @@ function makeLanguageToggle(tag, mobile)
         button.innerHTML = button.innerHTML == "en" ? "fr" : "en";
         changeLanguage(button.innerHTML)
     });
+    interactiveClicking(button);
 
     //let select = document.createElement("select");
     //select.id = "language-select";

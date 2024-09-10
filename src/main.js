@@ -187,10 +187,30 @@ function colourButtons()
         button.style.borderColor = jsonColours.buttonBorder;
         button.style.color = jsonColours.button;
         button.style.fontFamily = "Broadmoor";
-        button.style.backgroundColor = "#000000"
+        interactiveClicking(button);
     })
 }
 
+export function interactiveClicking(tag)
+{
+    tag.addEventListener("mouseover", () => 
+    {
+        tag.style.backgroundColor = "rgb(120, 120, 120)";
+    })
+    tag.addEventListener("mouseout", () => 
+    {
+        tag.style.backgroundColor = "transparent";
+    })
+    tag.onmousedown = () => 
+    {
+        console.log("HIS")
+        tag.style.backgroundColor = "rgb(220, 220, 220)";
+    };
+    tag.onmouseup = () => 
+    {
+        tag.style.backgroundColor = "transparent";
+    };
+}
 if (window.location.href.indexOf("item.html") == -1)
 {
     document.addEventListener('DOMContentLoaded', () => 
