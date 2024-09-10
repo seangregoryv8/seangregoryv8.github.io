@@ -22,11 +22,6 @@
         grid-column: 2;
         grid-row: 2;
     }
-    
-    .list
-    {
-        margin: 0 10%;
-    }
 
     .navBarOptions div
     {
@@ -38,7 +33,7 @@
     {
         background-color: rgb(40, 40, 40, 0.5);
         height: 15em;
-        margin: 15px 30px;
+        margin: 20px 10px;
         padding: 20px 0;
         background-repeat: no-repeat;
         background-position: center;
@@ -56,5 +51,6 @@
     .itemImage
     {
         visibility: hidden;
+        height: 0;
     }
 }
