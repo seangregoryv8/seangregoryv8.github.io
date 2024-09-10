@@ -55,8 +55,18 @@ data.description.forEach(desc =>
     description.appendChild(br);
 });
 
-if (window.innerWidth >= 600)
-    document.getElementsByClassName("contentBox")[0].style.backgroundImage = `url('../../images/borders/border-${getRandomNumber(1, 4)}.svg')`
+let chosenBorder = `url('../../images/borders/border-${getRandomNumber(1, 4)}.svg')`;
+
+function removeBorder()
+{
+    console.log("HI")
+    if (window.innerWidth < 600)
+        document.getElementsByClassName("contentBox")[0].style.backgroundImage = "none";
+    else
+        document.getElementsByClassName("contentBox")[0].style.backgroundImage = chosenBorder;
+}
+removeBorder();
+window.addEventListener('resize', removeBorder);
 
 function formulateButton()
 {

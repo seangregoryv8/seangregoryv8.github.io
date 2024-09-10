@@ -36,7 +36,7 @@
             "JavaScript Canvas",
             "JSON"
         ],
-        "source": "https://seangregoryv8.github.io/HeavenHumper/"
+        "source": "https://seangregoryv8.github.io/HeavenJumper/"
     },
     "cube":
     {
@@ -77,8 +77,9 @@
         "images": "madness",
         "description": 
         [
-            "Inspired by the 1997 movie of the same name, this game involves a player entering through different rooms, gathering artifacts, while avoiding the deadly traps that lay ahead.",
-            "This was my first game ever made using Javascript Canvas."
+            "Made for a hackathon, this game was inspired by the artstyle of the Madness: Combat series.",
+            "This features our main protagonist, Dude Guy, defeating endless zombies who cut his power lines, inturrupting his third rewatch of Real Housewives of Nevada.",
+            "Made in collaboration with "
         ],
         "languages": 
         [
@@ -86,7 +87,7 @@
             "CSS",
             "JavaScript Canvas"
         ],
-        "source": "https://seangregoryv8.github.io/3W5_Gregory_S/"
+        "source": "https://zacharytherrien.github.io/ConUHacksVIII/"
     },
     "masterTracker":
     {
