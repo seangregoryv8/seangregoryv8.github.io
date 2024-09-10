@@ -1,5 +1,6 @@
 // Notes:
 // FOCUS ON OPTIMIZATION NOW!!!
+// Make formspree contact form
 
 import { fetchColourJsonFiles, fetchInfoJsonFiles, fetchJsonFiles } from "./readJson.js";
 
