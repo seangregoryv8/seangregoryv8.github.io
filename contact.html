@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/style-mobile.css">
     <link rel="stylesheet" href="./css/navbar.css">
 
+    <link rel="stylesheet" href="./css/contact/main.css">
+
     <title>Sean Gregory</title>
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 </head>
@@ -26,6 +28,24 @@
     <section class="title">
         <h1 class="computerTitle">Contact</h1>
     </section>
+    
+    <!-- modify this form HTML and place wherever you want your form -->
+    <form class="contactForm"
+    action="https://formspree.io/f/mvgpnpep"
+    method="POST"
+    >
+        <label>
+            <input type="text" name="fullName" placeholder="Full Name">
+        </label>
+        <label>
+            <input type="email" name="email" placeholder="Email Address">
+        </label>
+        <label class="contactText">
+            <textarea name="message" placeholder="Enter a Message"></textarea>
+        </label>
+        <!-- your other form fields go here -->
+        <button type="submit">Send</button>
+    </form>
     
     <div class="aboutLanguagesSection" style="margin-top: 4em;">
         <div class="aboutLanguages">

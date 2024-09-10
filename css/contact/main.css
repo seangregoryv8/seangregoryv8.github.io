@@ -1,0 +1,36 @@
+form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label
+{
+    margin-bottom: 50px;
+}
+
+label input, label textarea
+{
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 16px;
+    width: 250px;
+}
+
+label textarea
+{
+    height: 400px;
+}
+
+.allLinks
+{
+    margin-bottom: 60px;
+}
+
+button
+{
+    width: 250px;
+    padding: 10px;
+    font-size: 24px;
+}

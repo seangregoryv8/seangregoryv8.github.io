@@ -268,7 +268,6 @@ function linkMaker(desc, link)
 }
 function showLinks()
 {
-    document.getElementsByClassName("allLinks")[0].style.height = "600px";
     linkMaker("Email: ", "mailto: seangregoryv8@gmail.com")
     linkMaker("LinkedIn: ", "https://www.linkedin.com/in/sean-gregory-v8/")
     linkMaker("Phone Number: (438) 499-8801", "");
