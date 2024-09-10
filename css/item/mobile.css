@@ -3,10 +3,11 @@
     .contentBox
     {
         position: absolute;
-        top: 50%;
+        top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
-        height: 70%;
+        height: auto;
+        padding: 10px 0;
         width: 90%;
     }
 
