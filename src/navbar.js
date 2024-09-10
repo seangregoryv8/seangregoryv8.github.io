@@ -16,7 +16,7 @@ function resizeNav()
     if (width >= 1160)
     {
         makeTags(["Home", "Projects", "GitHub", "Contact"], options);
-        makeLanguageToggle(options);
+        makeLanguageToggle(options, false);
     }
     else
     {
@@ -36,6 +36,7 @@ function resizeNav()
                 divtag.classList.add("dropdown-content");
         
                 makeTags(["Home", "Projects", "GitHub", "Contact"], divtag);
+                makeLanguageToggle(divtag, true);
 
                 options.appendChild(divtag);
 
@@ -73,12 +74,13 @@ function makeTags(tags, divtag)
 /**
  * 
  * @param {Element} tag 
+ * @param {boolean} mobile
  */
-function makeLanguageToggle(tag)
+function makeLanguageToggle(tag, mobile)
 {
     let div = document.createElement("div");
     div.classList.add("language-dropdown");
-    div.style.margin = "20px";
+    div.style.margin = mobile ? "0" : "20px";
 
     let label = document.createElement("label");
     label.setAttribute('for', "language-select");
@@ -87,7 +89,7 @@ function makeLanguageToggle(tag)
     let select = document.createElement("select");
     select.id = "language-select";
     select.style.backgroundColor = "transparent";
-    select.style.fontSize = "24px";
+    select.style.fontSize = mobile ? "20px" : "24px";
     select.style.color = "white";
     select.style.border = "none";
 
