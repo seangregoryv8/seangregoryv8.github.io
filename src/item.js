@@ -27,11 +27,17 @@ data.description.forEach(desc =>
 {
     let p = document.createElement("p");
     p.innerHTML = desc;
-    if (data.descriptionLinks != null)
+    let links = data.descriptionLinks || [];
+    console.log(links.length);
+    for (let i = 0; i <= links.length; i++)
     {
         if (p.innerHTML.indexOf("LINK") != -1)
         {
-            let splitter = p.innerHTML.split("LINK")
+            let occurance = p.innerHTML.indexOf("LINK");
+            console.log(occurance);
+            let first = p.innerHTML.substring(0, occurance);
+            let second = p.innerHTML.substring(occurance + 4, p.length);
+            let splitter = [first, second];
             console.log(splitter);
             // <a class='unstyledLink'>VikramSinghMTL</a>
             let a = document.createElement("a");
@@ -42,7 +48,6 @@ data.description.forEach(desc =>
             a.innerHTML = linkSplitter[linkSplitter.length - 1];
             a.style.color = jsonColours.button;
             a.style.fontWeight = "1000";
-            console.log();
             p.innerHTML = splitter[0];
             p.appendChild(a);
             p.innerHTML += splitter[1];
@@ -59,7 +64,6 @@ let chosenBorder = `url('../../images/borders/border-${getRandomNumber(1, 4)}.sv
 
 function removeBorder()
 {
-    console.log("HI")
     if (window.innerWidth < 600)
         document.getElementsByClassName("contentBox")[0].style.backgroundImage = "none";
     else
@@ -87,7 +91,6 @@ function formulateButton()
             description.appendChild(p);
         break;
         case "game":
-            console.log("HI")
             button.innerHTML = "Play now!"
             button.addEventListener("click", () => { window.location.href = data.source })
             

@@ -79,7 +79,12 @@
         [
             "Made for a hackathon, this game was inspired by the artstyle of the Madness: Combat series.",
             "This features our main protagonist, Dude Guy, defeating endless zombies who cut his power lines, inturrupting his third rewatch of Real Housewives of Nevada.",
-            "Made in collaboration with "
+            "Made in collaboration with LINK and LINK"
+        ],
+        "descriptionLinks":
+        [
+            "https://github.com/ZacharyTherrien",
+            "https://github.com/mimi717"
         ],
         "languages": 
         [
@@ -108,8 +113,16 @@
         "images": "news",
         "description": 
         [
-            "Inspired by the 1997 movie of the same name, this game involves a player entering through different rooms, gathering artifacts, while avoiding the deadly traps that lay ahead.",
-            "This was my first game ever made using Javascript Canvas."
+            "For another hackathon, this concept gives you the control to find news anywhere in the world.",
+            "Using a google maps spreadsheet and API technology, you can now stay more informed than ever with Hello World News!",
+            "Made in collaboration with LINK, LINK and LINK"
+
+        ],
+        "descriptionLinks":
+        [
+            "https://github.com/ZacharyTherrien",
+            "https://github.com/mimi717",
+            "https://github.com/nivekilller"
         ],
         "languages": 
         [
@@ -117,7 +130,7 @@
             "CSS",
             "JavaScript Canvas"
         ],
-        "source": "https://seangregoryv8.github.io/3W5_Gregory_S/"
+        "source": "https://zacharytherrien.github.io/McHacks-11/"
     },
     "slotMachine":
     {

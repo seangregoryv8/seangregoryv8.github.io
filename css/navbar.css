@@ -3,6 +3,8 @@
     nav
     {
         text-align: center;
+        z-index: 1;
+        padding: 20px 0;
     }
     .navBar
     {

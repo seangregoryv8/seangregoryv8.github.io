@@ -1,12 +1,12 @@
-import { changeLanguage, jsonColours } from "./main.js";
+import { changeLanguage, getLanguage, jsonColours } from "./main.js";
 
 function resizeNav()
 {
     let width = window.innerWidth
 
-    if (width >= 1160) console.log("DESKTOP")
-    else if (width >= 600) console.log("TABLET")
-    else console.log("MOBILE")
+    //if (width >= 1160) console.log("DESKTOP")
+    //else if (width >= 600) console.log("TABLET")
+    //else console.log("MOBILE")
 
     document.getElementsByTagName("nav")[0].style.backgroundColor = jsonColours.navbar;
 
@@ -86,32 +86,57 @@ function makeLanguageToggle(tag, mobile)
     label.setAttribute('for', "language-select");
     div.appendChild(label);
 
-    let select = document.createElement("select");
-    select.id = "language-select";
-    select.style.backgroundColor = "transparent";
-    select.style.fontSize = mobile ? "20px" : "24px";
-    select.style.color = "white";
-    select.style.border = "none";
-
-    let options = [];
-    options[0] = document.createElement("option");
-    options[0].setAttribute('value', "en");
-    options[0].setAttribute('selected', "true");
-    options[0].innerHTML = "en";
-
-    options[1] = document.createElement("option");
-    options[1].setAttribute('value', "fr");
-    options[1].innerHTML = "fr";
-
-    options.forEach(option => 
+    let button = document.createElement("button");
+    button.style.backgroundColor = "transparent";
+    button.style.fontSize = mobile ? "20px" : "24px";
+    button.style.color = "white";
+    button.style.border = "none";
+    let setLanguage = getLanguage();
+    console.log("Language: " + setLanguage)
+    button.innerHTML = setLanguage;
+    button.addEventListener("click", () =>
     {
-        option.style.color = "black";
-        option.addEventListener("click", () => {changeLanguage(option.innerHTML)});
-        select.appendChild(option);
-    })
+        button.innerHTML = button.innerHTML == "en" ? "fr" : "en";
+        changeLanguage(button.innerHTML)
+    });
 
-    div.appendChild(select);
-    tag.appendChild(div);
+    //let select = document.createElement("select");
+    //select.id = "language-select";
+    //select.style.backgroundColor = "transparent";
+    //select.style.fontSize = mobile ? "20px" : "24px";
+    //select.style.color = "white";
+    //select.style.border = "none";
+//
+    //console.log(setLanguage);
+    //let options = [];
+    //options[0] = document.createElement("option");
+    //options[0].setAttribute('value', "en");
+    //if (setLanguage == "en")
+    //    options[0].setAttribute('selected', "true");
+    //options[0].innerHTML = "en";
+//
+    //options[1] = document.createElement("option");
+    //options[1].setAttribute('value', "fr");
+    //if (setLanguage == "fr")
+    //    options[0].setAttribute('selected', "true");
+    //options[1].innerHTML = "fr";
+//
+    //options.forEach(option => 
+    //{
+    //    option.style.color = "black";
+    //    option.addEventListener("click", () => {changeLanguage(option.innerHTML)});
+    //    select.appendChild(option);
+    //})
+
+    //div.appendChild(select);
+    //tag.appendChild(div);
+    tag.appendChild(button);
+}
+
+if (localStorage.getItem("language") == null)
+{
+    localStorage.setItem("language", "fr")
+    language = "fr";
 }
 
 resizeNav();

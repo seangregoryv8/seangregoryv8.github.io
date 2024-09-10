@@ -4,8 +4,8 @@
         "aboutMeTitle": "About Me",
         "aboutMeDescription":
         [
-            "I'm a computer scientist, enjoyer of all parts of the field, with an equal amount of enjoyment for film.",
-            "I really like telling stories and creating new means to explain topics and explore ideas in computers, psychology, and various other interesting topics.",
+            "I'm a computer scientist and film director looking to really make a mark in the field!",
+            "I really like telling stories and creating new means to explain topics that I find interesting, or to just provide good entertainment.",
             "I am currently pursuing a Joint Major in Computer Science and Computation Arts at Concordia University, with a Bachelor's Degree specifically in Computer Science (BCompSci).",
             "I want to leave a legacy in the field, and be able to pass on the knowledge I learn through films or other means, to hopefully make a difference."
         ],
@@ -37,6 +37,12 @@
                 "MongoDB"
             ]
         },
+        "portfolioButtons": 
+        [
+            "Computer Science",
+            "Filmmaking"
+        ],
+        "portfolioTitle": "My Portfolio",
         "portfolioDesc": "Below are buttons to click on that show either my computer projects or art projects. Check them out!"
     },
     "fr":
@@ -44,8 +50,8 @@
         "aboutMeTitle": "À propos de moi",
         "aboutMeDescription":
         [
-            "Je suis informaticien, j'aime tous les aspects de ce domaine, et j'apprécie tout autant le cinéma.",
-            "J'aime vraiment raconter des histoires et créer de nouveaux moyens d'expliquer des sujets et d'explorer des idées dans le domaine de l'informatique, de la psychologie et de divers autres sujets intéressants.",
+            "Je suis un informaticien et un réalisateur de films qui cherche à faire sa marque dans le domaine !",
+            "J'aime vraiment raconter des histoires et créer de nouveaux moyens d'expliquer des sujets que je trouve intéressants, ou simplement de fournir un bon divertissement.",
             "Je poursuis actuellement des études en informatique et en arts informatiques à l'Université Concordia, avec un baccalauréat en informatique (BCompSci).",
             "Je veux laisser un héritage dans le domaine, et être capable de transmettre les connaissances que j'apprends à travers des films ou d'autres moyens, pour, je l'espère, faire une différence."
         ],
@@ -76,6 +82,13 @@
                 "Kotlin",
                 "MongoDB"
             ]
-        }
+        },
+        "portfolioButtons": 
+        [
+            "Informatique",
+            "Réalisation de films"
+        ],
+        "portfolioTitle": "Mon portefeuille",
+        "portfolioDesc": "Vous trouverez ci-dessous des boutons sur lesquels vous pouvez cliquer et qui montrent soit mes projets informatiques, soit mes projets artistiques. Jetez-y un coup d'œil !"
     }
 }
