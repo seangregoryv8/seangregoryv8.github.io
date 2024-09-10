@@ -1,3 +1,6 @@
+// Notes:
+// FOCUS ON OPTIMIZATION NOW!!!
+
 import { fetchColourJsonFiles, fetchInfoJsonFiles, fetchJsonFiles } from "./readJson.js";
 
 if (localStorage.getItem("language") == null) localStorage.setItem("language", "en")
@@ -70,11 +73,11 @@ function getPortfolioExplanations()
 
 function getAboutMe()
 {
-    let obj = (language == "en") ? jsonInfo.en : jsonInfo.fr;
-    document.getElementsByClassName("aboutMeTitle")[0].innerHTML = obj.aboutMeTitle
+    let info = (language == "en") ? jsonInfo.en : jsonInfo.fr;
+    document.getElementsByClassName("aboutMeTitle")[0].innerHTML = info.aboutMeTitle
     let desc =  document.getElementsByClassName("aboutMeDescription")[0]
     desc.innerHTML = ""
-    obj.aboutMeDescription.forEach(line =>
+    info.aboutMeDescription.forEach(line =>
     {
         let lin = document.createElement("p");
         lin.innerHTML = line;
@@ -83,14 +86,19 @@ function getAboutMe()
         desc.appendChild(document.createElement("br"));
     });
     
-    document.getElementsByClassName("aboutMeProjectComputer")[0].innerHTML = obj.projectsComputer
-    document.getElementsByClassName("aboutMeProjectComputer")[0].addEventListener("click", () => window.location.href = "./portfolio.html#computer")
-    document.getElementsByClassName("aboutMeProjectFilm")[0].innerHTML = obj.projectsFilm
-    document.getElementsByClassName("aboutMeProjectFilm")[0].addEventListener("click", () => window.location.href = "./portfolio.html#art")
-    document.getElementsByClassName("aboutMeWorkWith")[0].innerHTML = obj.work
-    document.getElementsByClassName("aboutMeWorkWith")[0].addEventListener("click", () => window.location.href = "./contact.html")
+    let currentButton = document.getElementsByClassName("aboutMeProjectComputer")[0]
+    currentButton.innerHTML = info.projectsComputer
+    currentButton.addEventListener("click", () => window.location.href = "./portfolio.html#computer")
+    
+    currentButton = document.getElementsByClassName("aboutMeProjectFilm")[0]
+    currentButton.innerHTML = info.projectsFilm
+    currentButton.addEventListener("click", () => window.location.href = "./portfolio.html#art")
+    
+    currentButton = document.getElementsByClassName("aboutMeWorkWith")[0]
+    currentButton.innerHTML = info.work
+    currentButton.addEventListener("click", () => window.location.href = "./contact.html")
 
-    let languages = obj.languages
+    let languages = info.languages
     document.getElementsByClassName("aboutLanguagesTitle")[0].innerHTML = languages.title;
     document.getElementsByClassName("aboutLangaugesDescription")[0].innerHTML = languages.info;
 
@@ -144,7 +152,7 @@ function showData(type)
                 title.innerHTML = key;
                 item.appendChild(title);
 
-                let source = document.createElement("img");
+                let source = document.createElement("img")
                 source.classList.add("itemImage");
                 source.src = `./images/${arr[i].images}/thumb.png`;
                 item.appendChild(source);

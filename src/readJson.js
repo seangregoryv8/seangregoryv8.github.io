@@ -10,7 +10,7 @@ export async function fetchJsonFiles()
         {
             const response = await fetch(`${jsonFolderPath}${file}`);
             if (!response.ok) throw new Error(`Failed to fetch ${file}`)
-            return response.json();
+            return await response.json();
         }));
         let arr = []
         for (let i = 0; i < jsonData.length; i++)
@@ -35,7 +35,7 @@ export async function fetchInfoJsonFiles()
         {
             const response = await fetch(`${jsonFolderPath}${file}`);
             if (!response.ok) throw new Error(`Failed to fetch ${file}`)
-            return response.json();
+            return await response.json();
         }));
         return jsonData[0];
     }
@@ -52,7 +52,7 @@ export async function fetchColourJsonFiles()
         {
             const response = await fetch(`${jsonFolderPath}${file}`);
             if (!response.ok) throw new Error(`Failed to fetch ${file}`)
-            return response.json();
+            return await response.json();
         }));
         return jsonData[0];
     }

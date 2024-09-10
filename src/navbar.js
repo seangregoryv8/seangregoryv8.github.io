@@ -38,15 +38,10 @@ function resizeNav()
                 makeLanguageToggle(divtag, true);
 
                 options.appendChild(divtag);
-
-                nav.style.height = "auto";
             }
             else
-            {
-                nav.style.height = "auto";
-                
                 options.removeChild(options.children[1]);
-            }
+            nav.style.height = "auto";
         })
     }
 }
@@ -138,8 +133,8 @@ function makeLanguageToggle(tag, mobile)
 
 if (localStorage.getItem("language") == null)
 {
-    localStorage.setItem("language", "fr")
-    language = "fr";
+    localStorage.setItem("language", "en")
+    language = "en";
 }
 
 resizeNav();
