@@ -17,9 +17,13 @@ export function getRandomNumber(min, max) {
 
 export function getLanguage() { return language; }
 
-async function getData()
+/**
+ * 
+ * @param {boolean} portfolio 
+ */
+async function getData(portfolio)
 {
-    jsonPortfolio = await fetchJsonFiles() || [];
+    if (portfolio) jsonPortfolio = await fetchJsonFiles() || [];
     jsonInfo = await fetchInfoJsonFiles() || [];
     jsonColours = await fetchColourJsonFiles() || [];
 
@@ -273,7 +277,7 @@ function showLinks()
     linkMaker("Phone Number: (438) 499-8801", "");
 }
 
-await getData();
+await getData(window.location.href.indexOf("portfolio.html") != -1);
 if (window.location.href.indexOf("portfolio.html") != -1)
 {
     getPortfolioExplanations();
