@@ -26,6 +26,17 @@ export function changeLanguage(newLanguage)
     getAboutMe();
 }
 
+function resizeSmallTitle()
+{
+    let width = window.innerWidth
+    let sec = document.getElementsByClassName("title")[0];
+
+    let height = (width / 4 < 600) ? 300 : width / 4
+    
+    sec.style.height = `${height}px`
+    let titl = document.getElementsByTagName("h1")[0];
+    titl.style.paddingBottom = `${height / 4}px`
+}
 function resizeTitle()
 {
     let width = window.innerWidth
@@ -189,6 +200,54 @@ if (window.location.href.indexOf("item.html") == -1)
     })
 }
 
+/**
+ * 
+ * @param {string} desc 
+ * @param {string} link 
+ */
+function linkMaker(desc, link)
+{
+    let div = document.createElement("div");
+    div.classList.add("linkContainer");
+    div.addEventListener("click", () => { window.location.href = link });
+
+    let p = document.createElement("p");
+    p.innerHTML = desc;
+    p.style.textAlign = "center";
+    let a = document.createElement("a");
+    a.href = link;
+    a.innerHTML = link.replace("mailto: ", "");
+    a.style.color = "white";
+    p.style.backgroundColor = jsonColours.topics;
+    p.appendChild(a)
+    div.appendChild(p);
+    document.getElementsByClassName("allLinks")[0].appendChild(div);
+}
+function showLinks()
+{
+    document.getElementsByClassName("allLinks")[0].style.height = "600px";
+    linkMaker("Email: ", "mailto: seangregoryv8@gmail.com")
+    linkMaker("LinkedIn: ", "https://www.linkedin.com/in/sean-gregory-v8/")
+    linkMaker("Phone Number: (438) 499-8801", "");
+}
+
+function changeMobileLinks()
+{
+    let width = window.innerWidth
+
+    if (width < 600)
+    {
+        let links = document.getElementsByClassName("allLinks")
+        for (let i = 0; i < links.length; i++)
+        {
+        }
+    }
+    else
+    {
+
+    }
+}
+
 await getData();
 if (window.location.href.indexOf("portfolio.html") != -1)
 {
@@ -207,6 +266,12 @@ if (window.location.href.indexOf("portfolio.html") != -1)
             case "art": showData("Filmmaking")
         }
     }
+}
+else if (window.location.href.indexOf("contact.html") != -1)
+{
+    window.addEventListener('resize', changeMobileLinks);
+    resizeSmallTitle();
+    showLinks();
 }
 else if (window.location.href.indexOf("item.html") == -1)
 {

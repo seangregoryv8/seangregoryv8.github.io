@@ -36,4 +36,9 @@
         visibility: hidden;
         height: 0;
     }
+    .allLinks p a
+    {
+        visibility: hidden;
+        position: absolute;
+    }
 }

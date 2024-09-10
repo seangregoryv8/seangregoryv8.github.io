@@ -65,7 +65,7 @@ html
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.allLanguages p
+.allLanguages p, .allLinks p
 {
     color: white;
     font-size: 24px;
