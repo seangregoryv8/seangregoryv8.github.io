@@ -28,5 +28,6 @@
     .aboutMeImage
     {
         visibility: hidden;
+        height: 0;
     }
 }
