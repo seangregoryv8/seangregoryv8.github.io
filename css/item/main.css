@@ -4,13 +4,6 @@
     background-position: center;
 }
 
-body
-{
-    display: block;
-    position: fixed;
-    inset: 0;
-}
-
 .contentBox
 {
     color: white;

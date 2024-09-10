@@ -2,13 +2,9 @@
 {
     .contentBox
     {
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         height: auto;
         padding: 10px 0;
-        width: 90%;
+        width: 100%;
     }
 
     .contentTitle
