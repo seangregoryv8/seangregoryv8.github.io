@@ -1,25 +1,37 @@
-import { changeLanguage, getLanguage, getRandomNumber, jsonColours, setLanguage } from "./main.js";
+import { getLanguage } from "./language.js";
+import { getRandomNumber, isItem, jsonColours } from "./defaults.js";
 
-const jsonString = localStorage.getItem("portfolioItem") || "";
-const data = JSON.parse(jsonString);
-console.log(data);
+let chosenBorder = `url('../../images/borders/border-${getRandomNumber(1, 4)}.svg')`;
 
-const imageURL = localStorage.getItem("backgroundImageUrl");
-
-if (imageURL)
+function begin()
 {
-    let content = document.getElementsByClassName("content")[0];
-    content.style.backgroundImage = `url('${imageURL}')`;
+    if (isItem())
+    {
+        const jsonString = localStorage.getItem("portfolioItem") || "";
+        const data = JSON.parse(jsonString);
+        
+        const imageURL = localStorage.getItem("backgroundImageUrl");
+        
+        if (imageURL)
+        {
+            let content = document.getElementsByClassName("content")[0];
+            content.style.backgroundImage = `url('${imageURL}')`;
+        
+            const img = new Image();
+            img.src = imageURL;
+        
+            img.onload = () => { content.style.height = `${img.height}px` }
+        }
+        
+        document.getElementsByClassName("contentTitle")[0].innerHTML = data.title;
 
-    const img = new Image();
-    img.src = imageURL;
-
-    img.onload = () => { content.style.height = `${img.height}px` }
+        removeBorder();
+        window.addEventListener('resize', removeBorder);
+        changeItemDescription(data);
+    }
 }
 
-document.getElementsByClassName("contentTitle")[0].innerHTML = data.title;
-
-export function changeItemDescription()
+export function changeItemDescription(data)
 {
     var description = document.getElementsByClassName("contentDesc")[0];
     description.innerHTML = "";
@@ -65,10 +77,9 @@ export function changeItemDescription()
         description.appendChild(br);
     });
     
-    formulateButton(description);
+    formulateButton(description, data);
 }
 
-let chosenBorder = `url('../../images/borders/border-${getRandomNumber(1, 4)}.svg')`;
 
 function removeBorder()
 {
@@ -78,10 +89,7 @@ function removeBorder()
         document.getElementsByClassName("contentBox")[0].style.backgroundImage = chosenBorder;
 }
 
-removeBorder();
-window.addEventListener('resize', removeBorder);
-
-function formulateButton(description)
+function formulateButton(description, data)
 {
     let button = document.getElementsByClassName("contentLink")[0];
     let p;
@@ -121,4 +129,4 @@ function formulateButton(description)
     description.appendChild(br);
 }
 
-changeItemDescription();
+begin();

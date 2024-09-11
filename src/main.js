@@ -1,58 +1,11 @@
 // Notes:
 // FOCUS ON OPTIMIZATION NOW!!!
-// Make formspree contact form
 
-import { fetchColourJsonFiles, fetchInfoJsonFiles, fetchJsonFiles } from "./readJson.js";
+import { getInfo, getColours, isHome, jsonColours, jsonInfo } from "./defaults.js";
+import { getLanguage } from "./language.js";
 
-if (localStorage.getItem("language") == null) localStorage.setItem("language", "en")
-var language = localStorage.getItem("language");
-
-var jsonPortfolio = [];
-var jsonInfo = [];
-export var jsonColours = [];
-
-export function getRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-export function getLanguage() { return language; }
-
-export function setLanguage()
-{
-    language = language == "en" ? "fr" : "en";
-    localStorage.setItem("language", language)
-}
-
-/**
- * 
- * @param {boolean} portfolio 
- */
-async function getData(portfolio)
-{
-    if (portfolio) jsonPortfolio = await fetchJsonFiles() || [];
-    jsonInfo = await fetchInfoJsonFiles() || [];
-    jsonColours = await fetchColourJsonFiles() || [];
-
-    document.getElementsByTagName("html")[0].style.backgroundColor = jsonColours.background
-}
-
-export function changeLanguage(newLanguage)
-{
-    language = newLanguage;
-    localStorage.setItem("language", language || "en")
-    if (window.location.href.indexOf("portfolio.html") != -1)
-    {
-        getPortfolioExplanations();
-    }
-    else if (window.location.href.indexOf("item.html") != -1)
-    {
-        changeItemDescription();
-    }
-    else
-    {
-        getAboutMe();
-    }
-}
+await getInfo();
+await getColours();
 
 function resizeSmallTitle()
 {
@@ -65,7 +18,7 @@ function resizeSmallTitle()
     let titl = document.getElementsByTagName("h1")[0];
     titl.style.paddingBottom = `${height / 4}px`
 }
-function resizeTitle()
+export function resizeTitle()
 {
     let width = window.innerWidth
     let sec = document.getElementsByClassName("title")[0];
@@ -77,50 +30,44 @@ function resizeTitle()
     titl.style.paddingBottom = `${height / 2}px`
 }
 
-function getPortfolioExplanations()
+export function getAboutMe()
 {
-    let obj = (getLanguage() == "en") ? jsonInfo.en : jsonInfo.fr;
-    document.getElementsByClassName("explanationTitle")[0].innerHTML = obj.portfolioDesc
-    document.getElementsByClassName("computerTitle")[0].innerHTML = obj.portfolioTitle
-    document.getElementsByClassName("compButton")[0].innerHTML = obj.portfolioButtons[0]
-    document.getElementsByClassName("artButton")[0].innerHTML = obj.portfolioButtons[1]
-}
-
-function getAboutMe()
-{
-    let info = (language == "en") ? jsonInfo.en : jsonInfo.fr;
-    document.getElementsByClassName("aboutMeTitle")[0].innerHTML = info.aboutMeTitle
-    let desc =  document.getElementsByClassName("aboutMeDescription")[0]
-    desc.innerHTML = ""
-    info.aboutMeDescription.forEach(line =>
+    if (isHome())
     {
-        let lin = document.createElement("p");
-        lin.innerHTML = line;
-        desc.appendChild(lin);
-
-        desc.appendChild(document.createElement("br"));
-    });
+        let info = (getLanguage() == "en") ? jsonInfo.en : jsonInfo.fr;
+        document.getElementsByClassName("aboutMeTitle")[0].innerHTML = info.aboutMeTitle
+        let desc =  document.getElementsByClassName("aboutMeDescription")[0]
+        desc.innerHTML = ""
+        info.aboutMeDescription.forEach(line =>
+        {
+            let lin = document.createElement("p");
+            lin.innerHTML = line;
+            desc.appendChild(lin);
     
-    let currentButton = document.getElementsByClassName("aboutMeProjectComputer")[0]
-    currentButton.innerHTML = info.projectsComputer
-    currentButton.addEventListener("click", () => window.location.href = "./portfolio.html#computer")
+            desc.appendChild(document.createElement("br"));
+        });
+        
+        let currentButton = document.getElementsByClassName("aboutMeProjectComputer")[0]
+        currentButton.innerHTML = info.projectsComputer
+        currentButton.addEventListener("click", () => window.location.href = "./portfolio.html#computer")
+        
+        currentButton = document.getElementsByClassName("aboutMeProjectFilm")[0]
+        currentButton.innerHTML = info.projectsFilm
+        currentButton.addEventListener("click", () => window.location.href = "./portfolio.html#art")
+        
+        currentButton = document.getElementsByClassName("aboutMeWorkWith")[0]
+        currentButton.innerHTML = info.work
+        currentButton.addEventListener("click", () => window.location.href = "./contact.html")
     
-    currentButton = document.getElementsByClassName("aboutMeProjectFilm")[0]
-    currentButton.innerHTML = info.projectsFilm
-    currentButton.addEventListener("click", () => window.location.href = "./portfolio.html#art")
+        let languages = info.languages
+        document.getElementsByClassName("aboutLanguagesTitle")[0].innerHTML = languages.title;
+        document.getElementsByClassName("aboutLangaugesDescription")[0].innerHTML = languages.info;
     
-    currentButton = document.getElementsByClassName("aboutMeWorkWith")[0]
-    currentButton.innerHTML = info.work
-    currentButton.addEventListener("click", () => window.location.href = "./contact.html")
-
-    let languages = info.languages
-    document.getElementsByClassName("aboutLanguagesTitle")[0].innerHTML = languages.title;
-    document.getElementsByClassName("aboutLangaugesDescription")[0].innerHTML = languages.info;
-
-    document.getElementsByClassName("allLanguages")[0].innerHTML = ""
-    languages.expert.forEach(language => languageMaker(language, "Expert"))
-    languages.intermediate.forEach(language => languageMaker(language, getLanguage() == "en" ? "Intermediate" : "Intermédiaire"))
-    languages.beginner.forEach(language => languageMaker(language, getLanguage() == "en" ? "Beginner" : "Débutant"))
+        document.getElementsByClassName("allLanguages")[0].innerHTML = ""
+        languages.expert.forEach(language => languageMaker(language, "Expert"))
+        languages.intermediate.forEach(language => languageMaker(language, getLanguage() == "en" ? "Intermediate" : "Intermédiaire"))
+        languages.beginner.forEach(language => languageMaker(language, getLanguage() == "en" ? "Beginner" : "Débutant"))
+    }
 }
 
 function languageMaker(desc, exp)
@@ -131,59 +78,12 @@ function languageMaker(desc, exp)
     document.getElementsByClassName("allLanguages")[0].appendChild(p);
 }
 
-/**
- * 
- * @param {string} type 
- */
-function showData(type)
-{
-    jsonPortfolio.forEach(port => {
-        if (type.toLowerCase().includes(port.title))
-        {
-            let arr = Object.values(port.data)
-            let keys = Object.keys(port.data)
-            let home = document.getElementsByClassName("list")[0];
-            for (let i = 0; i < arr.length; i++)
-            {
-                let key = formatTitle(keys[i]).trim();
-                let item = document.createElement("section");
-                item.style.backgroundImage = `url('../../images/borders/border-${getRandomNumber(1, 4)}.svg')`
-                item.classList.add("item");
-
-                item.onclick = () => 
-                {
-                    const newThing = arr[i];
-                    newThing.title = key;
-                    const jsonString = JSON.stringify(newThing);
-                    localStorage.setItem("portfolioItem", jsonString);
-                    const imageURL = `./images/${arr[i].images}/main.png`;
-                    localStorage.setItem("backgroundImageUrl", imageURL)
-                    window.location.href = `./item.html?${keys[i]}`;
-                }
-
-                let title = document.createElement("h2");
-                title.id = "itemTitle";
-                title.classList.add("shine");
-                title.innerHTML = key;
-                item.appendChild(title);
-
-                let source = document.createElement("img")
-                source.classList.add("itemImage");
-                source.src = `./images/${arr[i].images}/thumb.png`;
-                item.appendChild(source);
-
-                home.appendChild(item);
-            }
-        }
-    })
-
-}
 
 /**
  * 
  * @param {string} title 
  */
-function formatTitle(title)
+export function formatTitle(title)
 {
     let newTitle = "";
     let i = 0;
@@ -234,27 +134,9 @@ export function interactiveClicking(tag)
         tag.style.backgroundColor = "transparent";
     };
 }
+
 if (window.location.href.indexOf("item.html") == -1)
 {
-    document.addEventListener('DOMContentLoaded', () => 
-    {
-        let navBarOptions = document.getElementsByClassName("navBarOptions")[0];
-        let items = navBarOptions.getElementsByTagName("div");
-        for (let i = 0; i < items.length; i++)
-        {
-            //items[i].children[0].style.backgroundColor = "#8b0000"
-            items[i].children[0].addEventListener("click", () => 
-            {
-                let topic = items[i].children[0].innerHTML;
-                if (topic == "Informatique") topic = "Computer Science";
-                if (topic == "Réalisation de films") topic = "Filmmaking";
-                //items[i].children[0].style.backgroundColor = "#00AA00"
-                document.getElementsByClassName("list")[0].textContent = "";
-                
-                showData(topic);
-            });
-        }
-    })
 }
 
 /**
@@ -287,33 +169,15 @@ function showLinks()
     linkMaker("Phone Number: (438) 499-8801", "");
 }
 
-await getData(window.location.href.indexOf("portfolio.html") != -1);
-if (window.location.href.indexOf("portfolio.html") != -1)
-{
-    getPortfolioExplanations();
-    resizeTitle();
-    let buttonClick = window.location.href.split("#")[1];
-    if (buttonClick != undefined)
-    {
-        document.getElementsByClassName("list")[0].textContent = "";
-        switch (buttonClick)
-        {
-            case "computer":
-                showData("Computer Science");
-                break;
-            case "art":
-                showData("Filmmaking");
-                break;
-        }
-    }
-}
-else if (window.location.href.indexOf("contact.html") != -1)
+
+if (window.location.href.indexOf("contact.html") != -1)
 {
     resizeSmallTitle();
     showLinks();
 }
 else if (window.location.href.indexOf("item.html") == -1)
 {
+    console.log("HI")
     resizeTitle();
     getAboutMe();
 }

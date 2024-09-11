@@ -1,4 +1,6 @@
-import { changeLanguage, getLanguage, interactiveClicking, jsonColours } from "./main.js";
+import { jsonColours } from "./defaults.js";
+import { changeLanguage, getLanguage } from "./language.js";
+import { interactiveClicking } from "./main.js";
 
 async function resizeNav()
 {
@@ -129,12 +131,6 @@ function makeLanguageToggle(tag, mobile)
     //div.appendChild(select);
     //tag.appendChild(div);
     tag.appendChild(button);
-}
-
-if (localStorage.getItem("language") == null)
-{
-    localStorage.setItem("language", "en")
-    changeLanguage("en");
 }
 
 await resizeNav();
