@@ -4,10 +4,18 @@
         "type": "game",
         "images": "refurbished",
         "description": 
-        [
-            "This website, made entirely in base JavaScript, attempts to recreate the authentic feel of a 1970s VCR, with an added ARG storyline within.",
-            "It also contains 6 videos, all done by myself as well, and was initially meant to go along with Dance With Me in its story."
-        ],
+        {
+            "en":
+            [
+                "This website, made entirely in base JavaScript, attempts to recreate the authentic feel of a 1970s VCR, with an added ARG storyline within.",
+                "It also contains 6 videos, all done by myself as well, and was initially meant to go along with Dance With Me in its story."
+            ],
+            "fr":
+            [
+                "Ce site web, entièrement réalisé en JavaScript, tente de recréer la sensation authentique d'un magnétoscope des années 1970, avec un scénario ARG à l'intérieur.",
+                "Il contient également 6 vidéos, toutes réalisées par moi-même, et était initialement destiné à accompagner l'histoire de Dance With Me."
+            ]
+        },
         "languages": 
         [
             "HTML",
@@ -21,12 +29,21 @@
         "type": "game",
         "images": "heaven",
         "description": 
-        [
-            "The biggest JS Canvas project to date, this tells the story of a small man and his trip up to the heavens, training to become a warrior of God.",
-            "Code library provided by LINK."
-        ],
+        {
+            "en":
+            [
+                "The biggest JS Canvas project to date, this tells the story of a small man and his trip up to the heavens, training to become a warrior of God.",
+                "Made in collaboration with LINK. Code library provided by LINK."
+            ],
+            "fr":
+            [
+                "Le plus grand projet JS Canvas à ce jour, qui raconte l'histoire d'un petit homme et de son voyage dans les cieux, s'entraînant à devenir un guerrier de Dieu.",
+                "Réalisé en collaboration avec LINK. Code library provided by LINK. Réalisé en collaboration avec LINK."
+            ]
+        },
         "descriptionLinks":
         [
+            "https://www.linkedin.com/in/philippe-lizotte",
             "https://github.com/VikramSinghMTL"
         ],
         "languages": 
@@ -43,10 +60,18 @@
         "type": "game",
         "images": "cube",
         "description": 
-        [
-            "Inspired by the 1997 movie of the same name, this game involves a player entering through different rooms, gathering artifacts, while avoiding the deadly traps that lay ahead.",
-            "This was my first game ever made using Javascript Canvas."
-        ],
+        {
+            "en":
+            [
+                "Inspired by the 1997 movie of the same name, this game involves a player entering through different rooms, gathering artifacts, while avoiding the deadly traps that lay ahead.",
+                "This was my first game ever made using Javascript Canvas."
+            ],
+            "fr":
+            [
+                "Inspiré par le film du même nom sorti en 1997, ce jeu implique un joueur qui traverse différentes pièces, rassemble des artefacts, tout en évitant les pièges mortels qui l'attendent.",
+                "C'est le premier jeu que j'ai réalisé en utilisant Javascript Canvas."
+            ]
+        },
         "languages": 
         [
             "HTML",
@@ -60,10 +85,27 @@
         "type": "game",
         "images": "box",
         "description": 
+        {
+            "en":
+            [
+                "This is the first computer game I ever created, using only C#.",
+                "A simple puzzle game, you play the role of a daring adventurer, journeying to find the lone fisherman at the end of the road.",
+                "A new version using either JavaScript or another language will be coming out soon.",
+                "Special thanks to LINK, LINK and LINK."
+            ],
+            "fr":
+            [
+                "C'est le premier jeu informatique que j'ai créé, en utilisant uniquement le langage C#.",
+                "Un jeu de puzzle simple, dans lequel vous jouez le rôle d'un aventurier audacieux, qui part à la recherche du pêcheur solitaire au bout de la route.",
+                "Une nouvelle version utilisant JavaScript ou un autre langage sera bientôt disponible.",
+                "Remerciements spéciaux à LINK, LINK et LINK."
+            ]
+        },
+        "descriptionLinks":
         [
-            "This is the first computer game I ever created, using only C#.",
-            "A simple puzzle game, you play the role of a daring adventurer, journeying to find the lone fisherman at the end of the road.",
-            "A new version using either JavaScript or another language will be coming out soon."
+            "https://www.linkedin.com/in/philippe-lizotte",
+            "https://github.com/ZacharyTherrien",
+            "https://departments.johnabbott.qc.ca/william%20russell%202/larry-fagen"
         ],
         "languages": 
         [
@@ -76,11 +118,20 @@
         "type": "game",
         "images": "madness",
         "description": 
-        [
-            "Made for a hackathon, this game was inspired by the artstyle of the Madness: Combat series.",
-            "This features our main protagonist, Dude Guy, defeating endless zombies who cut his power lines, inturrupting his third rewatch of Real Housewives of Nevada.",
-            "Made in collaboration with LINK and LINK"
-        ],
+        {
+            "en":
+            [
+                "Made for a hackathon, this game was inspired by the artstyle of the Madness: Combat series.",
+                "This features our main protagonist, Dude Guy, defeating endless zombies who cut his power lines, inturrupting his third rewatch of Real Housewives of Nevada.",
+                "Made in collaboration with LINK and LINK."
+            ],
+            "fr":
+            [
+                "Réalisé dans le cadre d'un hackathon, ce jeu a été inspiré par le style artistique de la série Madness : Combat.",
+                "Ce jeu met en scène notre protagoniste principal, Dude Guy, en train de vaincre d'interminables zombies qui ont coupé ses lignes électriques, interrompant ainsi son troisième visionnage de Real Housewives of Nevada.",
+                "Réalisé en collaboration avec LINK et LINK."
+            ]
+        },
         "descriptionLinks":
         [
             "https://github.com/ZacharyTherrien",
@@ -97,7 +148,21 @@
     "masterTracker":
     {
         "type": "website",
-        "description": "This is my first portfolio item. Look at how badass it is!",
+        "description":
+        {
+            "en":
+            [
+                "Done for a job, I decided to take the tracker used for work and automate it using Visual Basics for Applications.",
+                "This gathers the total amount of items, separates them by type, and demonstrates a variety of skills capable for VBA to do.",
+                "Skills include: automated functions, event listeners, and a functional debugger."
+            ],
+            "fr":
+            [
+                "Le projet a été réalisé dans le cadre d'un travail, et j'ai décidé de prendre le tracker utilisé pour le travail et de l'automatiser à l'aide de Visual Basics for Applications.",
+                "Cela rassemble la quantité totale d'articles, les sépare par type, et démontre une variété de compétences que VBA est capable de faire.",
+                "Les compétences comprennent : des fonctions automatisées, des récepteurs d'événements et un débogueur fonctionnel."
+            ]
+        },
         "languages": 
         [
             "HTML",
@@ -112,12 +177,20 @@
         "type": "game",
         "images": "news",
         "description": 
-        [
-            "For another hackathon, this concept gives you the control to find news anywhere in the world.",
-            "Using a google maps spreadsheet and API technology, you can now stay more informed than ever with Hello World News!",
-            "Made in collaboration with LINK, LINK and LINK"
-
-        ],
+        {
+            "en":
+            [
+                "For another hackathon, this concept gives you the control to find news anywhere in the world.",
+                "Using a google maps spreadsheet and API technology, you can now stay more informed than ever with Hello World News!",
+                "Made in collaboration with LINK, LINK and LINK."
+            ],
+            "fr":
+            [
+                "Pour un autre hackathon, ce concept vous donne le contrôle pour trouver des nouvelles n'importe où dans le monde.",
+                "En utilisant une feuille de calcul google maps et la technologie API, vous pouvez maintenant rester plus informé que jamais avec Hello World News !",
+                "Réalisé en collaboration avec LINK, LINK et LINK."
+            ]
+        },
         "descriptionLinks":
         [
             "https://github.com/ZacharyTherrien",
@@ -135,12 +208,23 @@
     "slotMachine":
     {
         "type": "website",
-        "description": "This is my first portfolio item. Look at how badass it is!",
+        "images": "slots",
+        "description": 
+        {
+            "en":
+            [
+                "What's better than a website done in VBA? A game done in VBA!",
+                "Test your luck in the slot machine, roughly done in VBA to guarantee a good time in visual Vegas!"
+            ],
+            "fr":
+            [
+                "Qu'y a-t-il de mieux qu'un site web réalisé en VBA ? Un jeu fait en VBA !",
+                "Tentez votre chance dans la machine à sous, grossièrement réalisée en VBA pour vous garantir un bon moment à Visual Vegas !"
+            ]
+        },
         "languages": 
         [
-            "HTML",
-            "CSS",
-            "JavaScript"
+            "VBA"
         ],
         "preview": "./images/refurbished.png",
         "source": "https://seangregoryv8.github.io/RefurbishedImmortality/"
@@ -148,25 +232,56 @@
     "plantChecker":
     {
         "type": "website",
-        "description": "This is my first portfolio item. Look at how badass it is!",
+        "images": "plant",
+        "description": 
+        {
+            "en":
+            [
+                "This complex machinery is capable of detecting the moisture, health, and light of a houseplant using a raspberry pi.",
+                "However, the part I was in charge of was the urban-esque design pattern for the mobile app to detect everything.",
+                "Complete with changeable colours, hand-drawn portraits, and showcasing various artistic skills to apply flair to something as simple as a plant checker."
+            ],
+            "fr":
+            [
+                "Cette machinerie complexe est capable de détecter l'humidité, la santé et la lumière d'une plante d'intérieur à l'aide d'un raspberry pi.",
+                "Cependant, la partie dont j'étais responsable était le modèle de conception urbain-esque pour l'application mobile permettant de tout détecter.",
+                "Avec des couleurs changeantes, des portraits dessinés à la main et la mise en valeur de diverses compétences artistiques pour donner du cachet à quelque chose d'aussi simple qu'un vérificateur de plantes."
+            ]
+        },
         "languages": 
         [
-            "HTML",
-            "CSS",
-            "JavaScript"
+            "C#",
+            "ASP.NET",
+            "Android Studio",
+            "Raspberry Pi"
         ],
         "preview": "./images/refurbished.png",
         "source": "https://seangregoryv8.github.io/RefurbishedImmortality/"
     },
-    "pizzaShop":
+    "webheadsPizzeria":
     {
         "type": "website",
         "images": "pizza",
         "description": 
+        {
+            "en":
+            [
+                "This complex machinery is capable of detecting the moisture, health, and light of a houseplant using a raspberry pi.",
+                "However, the part I was in charge of was the urban-esque design pattern for the mobile app to detect everything.",
+                "Complete with changeable colours, hand-drawn portraits, and showcasing various artistic skills to apply flair to something as simple as a plant checker."
+            ],
+            "fr":
+            [
+                "Un site web de restaurant de pizzas conçu pour le cours de programmation web III de l'automne 2021.",
+                "Ce site web démontre les opérations C-R-U-D dans une base de données, ainsi que des éléments plus créatifs.",
+                "J'ai été en charge de la plupart des fonctionnalités frontales et partielles.",
+                "Réalisé en collaboration avec LINK et LINK."
+            ]
+        },
+        "descriptionLinks":
         [
-            "A pizza restaurant website designed for the Fall 2021 Web Programming III course.",
-            "This website demonstrates the C-R-U-D operations in a database, as well as showcasing more creative elements.",
-            "I was in charge of mostly the front-end and part functionality, done alongside <"
+            "https://github.com/Rumk2001",
+            "https://www.linkedin.com/in/carmina-rotaru-79a5a5221"
         ],
         "languages": 
         [

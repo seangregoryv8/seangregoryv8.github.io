@@ -17,6 +17,12 @@ export function getRandomNumber(min, max) {
 
 export function getLanguage() { return language; }
 
+export function setLanguage()
+{
+    language = language == "en" ? "fr" : "en";
+    localStorage.setItem("language", language)
+}
+
 /**
  * 
  * @param {boolean} portfolio 
@@ -33,10 +39,14 @@ async function getData(portfolio)
 export function changeLanguage(newLanguage)
 {
     language = newLanguage;
-    localStorage.setItem("language", language)
+    localStorage.setItem("language", language || "en")
     if (window.location.href.indexOf("portfolio.html") != -1)
     {
         getPortfolioExplanations();
+    }
+    else if (window.location.href.indexOf("item.html") != -1)
+    {
+        changeItemDescription();
     }
     else
     {

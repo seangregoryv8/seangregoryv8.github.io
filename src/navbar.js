@@ -1,6 +1,6 @@
 import { changeLanguage, getLanguage, interactiveClicking, jsonColours } from "./main.js";
 
-function resizeNav()
+async function resizeNav()
 {
     let width = window.innerWidth
 
@@ -83,13 +83,13 @@ function makeLanguageToggle(tag, mobile)
     //div.appendChild(label);
 
     let button = document.createElement("button");
+    button.classList.add("languageButton");
     button.style.backgroundColor = "transparent";
     button.style.fontSize = mobile ? "24px" : "36px";
     button.style.color = "white";
     button.style.border = "none";
     button.style.textAlign = mobile ? "left" : "center";
     let setLanguage = getLanguage();
-    console.log("Language: " + setLanguage)
     button.innerHTML = setLanguage;
     button.addEventListener("click", () =>
     {
@@ -134,9 +134,9 @@ function makeLanguageToggle(tag, mobile)
 if (localStorage.getItem("language") == null)
 {
     localStorage.setItem("language", "en")
-    language = "en";
+    changeLanguage("en");
 }
 
-resizeNav();
+await resizeNav();
 
 window.addEventListener('resize', resizeNav);
