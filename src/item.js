@@ -34,11 +34,9 @@ data.description.forEach(desc =>
         if (p.innerHTML.indexOf("LINK") != -1)
         {
             let occurance = p.innerHTML.indexOf("LINK");
-            console.log(occurance);
             let first = p.innerHTML.substring(0, occurance);
             let second = p.innerHTML.substring(occurance + 4, p.length);
             let splitter = [first, second];
-            console.log(splitter);
             // <a class='unstyledLink'>VikramSinghMTL</a>
             let a = document.createElement("a");
             a.classList.add("unstyledLink");
@@ -46,6 +44,7 @@ data.description.forEach(desc =>
             a.href = link;
             let linkSplitter = link.split("/");
             a.innerHTML = linkSplitter[linkSplitter.length - 1];
+            console.log(a.innerHTML)
             a.style.color = jsonColours.button;
             a.style.fontWeight = "1000";
             p.innerHTML = splitter[0];
@@ -54,6 +53,7 @@ data.description.forEach(desc =>
             linkNum++;
         }
     }
+    console.log(p);
     description.appendChild(p);
 
     let br = document.createElement("br");
