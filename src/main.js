@@ -1,7 +1,7 @@
 // Notes:
 // FOCUS ON OPTIMIZATION NOW!!!
 
-import { getInfo, getColours, isHome, jsonColours, jsonInfo } from "./defaults.js";
+import { getInfo, getColours, isHome, jsonColours, jsonInfo, isContact } from "./defaults.js";
 import { getLanguage } from "./language.js";
 
 await getInfo();
@@ -18,6 +18,7 @@ function resizeSmallTitle()
     let titl = document.getElementsByTagName("h1")[0];
     titl.style.paddingBottom = `${height / 4}px`
 }
+
 export function resizeTitle()
 {
     let width = window.innerWidth
@@ -135,10 +136,6 @@ export function interactiveClicking(tag)
     };
 }
 
-if (window.location.href.indexOf("item.html") == -1)
-{
-}
-
 /**
  * 
  * @param {string} desc 
@@ -162,6 +159,7 @@ function linkMaker(desc, link)
     div.appendChild(p);
     document.getElementsByClassName("allLinks")[0].appendChild(div);
 }
+
 function showLinks()
 {
     linkMaker("Email: ", "mailto: seangregoryv8@gmail.com")
@@ -170,14 +168,13 @@ function showLinks()
 }
 
 
-if (window.location.href.indexOf("contact.html") != -1)
+if (isContact())
 {
     resizeSmallTitle();
     showLinks();
 }
-else if (window.location.href.indexOf("item.html") == -1)
+else if (isHome())
 {
-    console.log("HI")
     resizeTitle();
     getAboutMe();
 }

@@ -38,7 +38,7 @@
             "fr":
             [
                 "Le plus grand projet JS Canvas à ce jour, qui raconte l'histoire d'un petit homme et de son voyage dans les cieux, s'entraînant à devenir un guerrier de Dieu.",
-                "Réalisé en collaboration avec LINK. Code library provided by LINK. Réalisé en collaboration avec LINK."
+                "Réalisé en collaboration avec LINK. Code library provided by LINK"
             ]
         },
         "descriptionLinks":
@@ -103,13 +103,6 @@
         },
         "descriptionLinks":
         [
-            "This is the first computer game I ever created, using only C#.",
-            "A simple puzzle game, you play the role of a daring adventurer, journeying to find the lone fisherman at the end of the road.",
-            "A new version using either JavaScript or another language will be coming out soon.",
-            "Special thanks to LINK, LINK and LINK"
-        ],
-        "descriptionLinks":
-        [
             "https://www.linkedin.com/in/philippe-lizotte",
             "https://github.com/ZacharyTherrien",
             "https://departments.johnabbott.qc.ca/william%20russell%202/larry-fagen"
@@ -118,7 +111,7 @@
         [
             "C#"
         ],
-        "source": "https://seangregoryv8.github.io/3W5_Gregory_S/"
+        "source": "../files/LetsBox.exe"
     },
     "madnessZombieHorde":
     {
@@ -155,7 +148,6 @@
     "masterTracker":
     {
         "type": "website",
-        "images": "tracker",
         "description":
         {
             "en":
@@ -180,7 +172,7 @@
     },
     "helloWorldNews":
     {
-        "type": "game",
+        "type": "website",
         "images": "news",
         "description": 
         {
@@ -214,7 +206,6 @@
     "slotMachine":
     {
         "type": "website",
-        "images": "slots",
         "description": 
         {
             "en":
@@ -262,19 +253,19 @@
             "Raspberry Pi"
         ],
         "preview": "./images/refurbished.png",
-        "source": "https://seangregoryv8.github.io/RefurbishedImmortality/"
+        "source": "https://github.com/jac-final-project-w22/course-project-le-sussy-farmers"
     },
     "webheadsPizzeria":
     {
         "type": "website",
-        "images": "pizza",
         "description": 
         {
             "en":
             [
-                "This complex machinery is capable of detecting the moisture, health, and light of a houseplant using a raspberry pi.",
-                "However, the part I was in charge of was the urban-esque design pattern for the mobile app to detect everything.",
-                "Complete with changeable colours, hand-drawn portraits, and showcasing various artistic skills to apply flair to something as simple as a plant checker."
+                "A pizza restaurant website designed for the Fall 2021 Web Programming III course.",
+                "This website demonstrates C-R-U-D operations in a database, as well as more creative elements.",
+                "I was in charge of most of the front-end and partial functionality.",
+                "Made in collaboration with LINK and LINK."
             ],
             "fr":
             [

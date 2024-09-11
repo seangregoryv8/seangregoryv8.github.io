@@ -123,6 +123,22 @@ function formulateButton(description, data)
             p.style.color = jsonColours.buttonBorder;
             description.appendChild(p);
         break;
+        case "website":
+            button.innerHTML = getLanguage() == "en" ? "Check it out!" : "Consultez-le !"
+            button.addEventListener("click", () => { window.location.href = data.source })
+            
+            p = document.createElement("p");
+
+            p.innerHTML = getLanguage() == "en" ? "Languages Used:" : "Langues utilisées:";
+            data.languages.forEach(language => 
+            {
+                p.innerHTML += ` ${language},`
+            });
+
+            p.innerHTML = p.innerHTML.substring(0, p.innerHTML.length - 1);
+            p.style.color = jsonColours.buttonBorder;
+            description.appendChild(p);
+        break;
     }
     
     let br = document.createElement("br");

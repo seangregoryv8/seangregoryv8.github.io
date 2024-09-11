@@ -8,6 +8,13 @@ var jsonPortfolio = [];
 async function getPortfolio()
 {
     jsonPortfolio = await fetchJsonFiles() || [];
+
+    const data = jsonPortfolio[0].data
+    for (const key in data)
+    {
+        if (data[key].images == null)
+            delete data[key];
+    }
 }
 
 await getInfo();
