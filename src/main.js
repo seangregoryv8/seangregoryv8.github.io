@@ -111,6 +111,8 @@ function colourButtons()
         button.style.borderColor = jsonColours.buttonBorder;
         button.style.color = jsonColours.button;
         button.style.fontFamily = "Broadmoor";
+        button.style.fontWeight = "1000";
+        button.style.fontKerning = "none";
         interactiveClicking(button);
     })
 }
