@@ -103,6 +103,13 @@
         },
         "descriptionLinks":
         [
+            "This is the first computer game I ever created, using only C#.",
+            "A simple puzzle game, you play the role of a daring adventurer, journeying to find the lone fisherman at the end of the road.",
+            "A new version using either JavaScript or another language will be coming out soon.",
+            "Special thanks to LINK, LINK and LINK"
+        ],
+        "descriptionLinks":
+        [
             "https://www.linkedin.com/in/philippe-lizotte",
             "https://github.com/ZacharyTherrien",
             "https://departments.johnabbott.qc.ca/william%20russell%202/larry-fagen"
@@ -148,6 +155,7 @@
     "masterTracker":
     {
         "type": "website",
+        "images": "tracker",
         "description":
         {
             "en":
@@ -165,9 +173,7 @@
         },
         "languages": 
         [
-            "HTML",
-            "CSS",
-            "JavaScript"
+            "VBA"
         ],
         "preview": "./images/refurbished.png",
         "source": "https://seangregoryv8.github.io/RefurbishedImmortality/"
