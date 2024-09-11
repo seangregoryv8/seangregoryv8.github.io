@@ -84,7 +84,7 @@ function makeLanguageToggle(tag, mobile)
 
     let button = document.createElement("button");
     button.style.backgroundColor = "transparent";
-    button.style.fontSize = mobile ? "20px" : "24px";
+    button.style.fontSize = mobile ? "24px" : "36px";
     button.style.color = "white";
     button.style.border = "none";
     button.style.textAlign = mobile ? "left" : "center";

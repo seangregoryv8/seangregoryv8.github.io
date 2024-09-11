@@ -25,11 +25,12 @@
     {
         margin-right: auto;
         font-size: 36px;
+        font-family: "vanillaWhale"
     }
     .navLinks
     {
         margin-left: auto;
-        font-size: 24px;
+        font-size: 36px;
     }
     .navLinks div
     {
@@ -38,18 +39,19 @@
         display: flex;
         align-items: center;
     }
-    .navLinks div a
+    .navLinks div a, .navLinks div button
     {
         padding: 0 20px;
     }
 }
 
-.navLinks div a
+.navLinks div a, .navLinks div button
 {
     text-decoration: none;
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Broadmoor";
 }
+
 @media only screen and (max-width: 1160px)
 {
     .navBar
@@ -73,12 +75,12 @@
     {
         margin-right: auto;
         font-size: 30px;
-
+        font-family: "vanillaWhale"
     }
     .navLinks
     {
         margin-right: auto;
-        font-size: 16px;
+        font-size: 24px;
     }
 
     .navLinks div

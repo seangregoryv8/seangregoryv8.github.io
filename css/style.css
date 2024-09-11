@@ -7,7 +7,13 @@
 @font-face
 {
     font-family: "Broadmoor";
-    src: url("../fonts/BroadmoorBold.otf") format('truetype');
+    src: url("../fonts/sexsmith.regular.otf") format('truetype');
+}
+
+@font-face
+{
+    font-family: "VanillaWhale";
+    src: url("../fonts/VanillaWhale.otf") format('truetype');
 }
 
 *
@@ -37,7 +43,7 @@ html
 
 .computerTitle
 {
-    font-family: "ParkLane";
+    font-family: "VanillaWhale";
 }
 
 .aboutMeSection, .aboutLanguagesSection, .explanationSection
@@ -50,7 +56,7 @@ html
     background-color: transparent;
     padding: 10px;
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 22px;
     border-radius: 10px;
 }
 
@@ -61,8 +67,8 @@ html
 
 .aboutMeDescription, .aboutLangaugesDescription
 {
-    font-size: 16px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-family: "Broadmoor"
 }
 
 .allLanguages p, .allLinks p
@@ -77,4 +83,9 @@ html
 button a
 {
     text-decoration: none;
+}
+
+.list
+{
+    width: 100%;
 }
