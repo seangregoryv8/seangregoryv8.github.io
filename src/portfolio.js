@@ -107,7 +107,6 @@ function begin()
         {
             items[i].children[0].addEventListener("click", () => 
             {
-                console.log("HI")
                 let topic = items[i].children[0].innerHTML;
                 if (topic == "Informatique") topic = "Computer Science";
                 if (topic == "Réalisation de films") topic = "Filmmaking";

@@ -41,21 +41,17 @@ export function changeItemDescription(data)
     let linkNum = 0;
     langDesc.forEach(desc => 
     {
-        console.log(desc);
         let p = document.createElement("p");
         p.innerHTML = desc;
         let links = data.descriptionLinks || [];
-        console.log(links.length);
         for (let i = 0; i <= links.length; i++)
         {
             if (p.innerHTML.indexOf("LINK") != -1)
             {
                 let occurance = p.innerHTML.indexOf("LINK");
-                console.log(occurance);
                 let first = p.innerHTML.substring(0, occurance);
                 let second = p.innerHTML.substring(occurance + 4, p.length);
                 let splitter = [first, second];
-                console.log(splitter);
                 // <a class='unstyledLink'>VikramSinghMTL</a>
                 let a = document.createElement("a");
                 a.classList.add("unstyledLink");

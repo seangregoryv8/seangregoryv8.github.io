@@ -127,7 +127,6 @@ export function interactiveClicking(tag)
     })
     tag.onmousedown = () => 
     {
-        console.log("HIS")
         tag.style.backgroundColor = "rgb(220, 220, 220)";
     };
     tag.onmouseup = () => 
@@ -166,7 +165,6 @@ function showLinks()
     linkMaker("LinkedIn: ", "https://www.linkedin.com/in/sean-gregory-v8/")
     linkMaker("Phone Number: (438) 499-8801", "");
 }
-
 
 if (isContact())
 {
