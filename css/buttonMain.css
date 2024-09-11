@@ -12,6 +12,8 @@
     color: white;
     width: 100%;
     font-family: "Broadmoor";
+    font-weight: 1000;
+    font-kerning: none;
     font-size: 30px;
 }
 

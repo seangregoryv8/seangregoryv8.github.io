@@ -68,7 +68,9 @@ html
 .aboutMeDescription, .aboutLangaugesDescription
 {
     font-size: 24px;
-    font-family: "Broadmoor"
+    font-family: "Broadmoor";
+    font-weight: 1000;
+    font-kerning: none;
 }
 
 .allLanguages p, .allLinks p
@@ -78,6 +80,8 @@ html
     margin: 10px;
     padding: 20px;
     font-family: "Broadmoor";
+    font-weight: 1000;
+    font-kerning: none;
 }
 
 button a

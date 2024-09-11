@@ -23,6 +23,8 @@
 {
     color: white;
     font-family: "Broadmoor";
+    font-weight: 1000;
+    font-kerning: none;
 }
 
 .contentLink

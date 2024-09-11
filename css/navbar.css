@@ -50,6 +50,8 @@
     text-decoration: none;
     color: white;
     font-family: "Broadmoor";
+    font-weight: 1000;
+    font-kerning: none;
 }
 
 @media only screen and (max-width: 1160px)
