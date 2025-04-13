@@ -19,6 +19,28 @@
         "source": "https://www.youtube.com/watch?v=D-LhSjYk6OQ",
         "length": 413
     },
+    "twentyFourHours":
+    {
+        "type": "film",
+        "images": "twentyfour",
+        "description": 
+        {
+            "en":
+            [
+                "[24 Hours] is a short film I made as an experimental departure from my usual style.",
+                "It tells the story of a young woman putting down the hyper-stimulation of the world around her, spending 24 hours without her phone and the noise around her.",
+                "A more atmospheric film, using minimalist, elongated shots and a focus on sound design, it was a fun challenge, and I hope to do more in the future."
+            ],
+            "fr":
+            [
+                "[24 Heures] est un court métrage que j'ai réalisé pour m'éloigner de mon style habituel",
+                "Il raconte l'histoire d'une jeune femme qui met fin à l'hyper-stimulation du monde qui l'entoure, en passant 24 heures sans son téléphone et sans le bruit qui l'entoure",
+                "Un film plus atmosphérique, utilisant des plans minimalistes et allongés et mettant l'accent sur la conception sonore, c'était un défi amusant, et j'espère en faire d'autres à l'avenir."
+            ]
+        },
+        "source": "https://www.youtube.com/watch?v=Dm6AvWpE4CY",
+        "length": 614
+    },
     "climatesGraveyard":
     {
         "type": "film",
